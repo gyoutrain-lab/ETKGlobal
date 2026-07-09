@@ -4,13 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- ==========================================================================
-        META OPEN GRAPH (PERMANENT GLOBAL VISUAL THUMBNAIL PREVIEW)
-        ========================================================================== -->
     <title>ETK Yogyakarta - Pusat Akselerasi Bahasa Inggris Skala Internasional</title>
     <meta name="description" content="Lembaga pelatihan bahasa Inggris korporat dengan pendekatan PPS, akselerasi IELTS Band 9, dan transformasi karir global melalui penguasaan struktur bahasa premium.">
     
-    <!-- Meta Optimization Links -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://gyoutrain-lab.github.io/ETK_Yogyakarta/">
     <meta property="og:title" content="ETK Yogyakarta - Pusat Akselerasi Bahasa Inggris Skala Internasional">
@@ -52,8 +48,11 @@
             box-sizing: border-box;
             font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
         }
+        html {
+            scroll-behavior: smooth;
+        }
         body {
-            background-color: #0f172a; 
+            background-color: #0b1329; 
             color: #cbd5e1;
             line-height: 1.7;
         }
@@ -63,7 +62,7 @@
             margin: 0 auto;
         }
 
-        /* Navigation Header - UPDATED TO PREMIUM TURQUOISE/TEAL */
+        /* Navigation Header */
         header {
             background: linear-gradient(135deg, #0d9488 0%, #115e59 100%); 
             border-bottom: 2px solid #14b8a6; 
@@ -78,12 +77,8 @@
             justify-content: space-between;
             align-items: center;
         }
-        .logo a {
-            display: block;
-            text-decoration: none;
-        }
         .logo img {
-            height: 40px;
+            height: 42px;
             width: auto;
             display: block;
         }
@@ -100,43 +95,47 @@
             text-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
         }
 
-        /* Top Hero Banner Container */
-        .hero-banner-container {
-            width: 100%;
-            max-width: 1200px;
-            margin: 40px auto 0 auto;
-            padding: 0 5%;
-            overflow: hidden;
+        /* OVERHAULED HERO: Split Asymmetric Layout (Text Left / Image Vertical Right) */
+        .hero-split-section {
+            padding: 80px 0;
+            background: radial-gradient(circle at 20% 30%, rgba(20, 184, 166, 0.15), transparent 60%);
+        }
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 40px;
+            align-items: center;
+        }
+        .hero-text-side {
+            text-align: left;
+        }
+        .hero-text-side h1 {
+            font-size: 42px;
+            color: #ffffff;
+            font-weight: 800;
+            line-height: 1.25;
+            letter-spacing: -1px;
+            margin-bottom: 25px;
+        }
+        .hero-text-side p {
+            font-size: 18px;
+            color: #94a3b8;
+            margin-bottom: 40px;
+        }
+        .hero-image-side {
+            position: relative;
         }
         .hero-banner-img {
             width: 100%;
             height: auto;
             border-radius: 16px;
-            border: 1px solid #334155;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-            display: block;
+            border: 1px solid #14b8a6;
+            box-shadow: 0 15px 35px rgba(13, 148, 136, 0.25);
+            transform: perspective(1000px) rotateY(-5deg);
+            transition: transform 0.5s ease;
         }
-
-        /* Hero Layout Adjustments */
-        .hero {
-            padding: 60px 0 60px 0;
-            background: radial-gradient(circle at 50% 20%, rgba(13, 148, 136, 0.15), transparent 50%);
-            text-align: center;
-        }
-        .hero h1 {
-            font-size: 40px;
-            color: #ffffff;
-            font-weight: 800;
-            max-width: 950px;
-            margin: 0 auto 25px auto;
-            line-height: 1.3;
-            letter-spacing: -1px;
-        }
-        .hero p {
-            font-size: 18px;
-            color: #94a3b8;
-            max-width: 800px;
-            margin: 0 auto 40px auto;
+        .hero-banner-img:hover {
+            transform: perspective(1000px) rotateY(0deg);
         }
         .btn-cta {
             display: inline-block;
@@ -155,98 +154,121 @@
             box-shadow: 0 6px 25px rgba(13, 148, 136, 0.6);
         }
 
-        /* Dashboard Section */
+        /* OVERHAULED DASHBOARD: Downward Setup via Vertical Left Controller Stack */
         .dashboard-section {
-            padding: 80px 0;
+            padding: 90px 0;
             background-color: #0f172a;
         }
-        .dashboard-container {
-            background-color: #1e293b;
-            border: 1px solid #334155;
-            border-radius: 16px;
-            padding: 40px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        .section-title {
+            text-align: center;
+            font-size: 34px;
+            color: #ffffff;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+        .section-subtitle {
+            text-align: center;
+            color: #94a3b8;
+            margin-bottom: 50px;
+            font-size: 16px;
+        }
+        .dashboard-vertical-layout {
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            gap: 40px;
+            align-items: start;
         }
         
-        /* Tab Navigation Controllers */
-        .dashboard-tabs {
+        /* Left Vertical Tabs Track */
+        .dashboard-tabs-vertical {
             display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            border-bottom: 2px solid #334155;
-            padding-bottom: 20px;
-            margin-bottom: 35px;
+            flex-direction: column;
+            gap: 12px;
+            position: sticky;
+            top: 100px;
         }
         .tab-btn {
-            background-color: #121b2e;
+            background-color: #1e293b;
             color: #94a3b8;
             border: 1px solid #334155;
-            padding: 12px 24px;
-            border-radius: 8px;
+            padding: 16px 20px;
+            border-radius: 10px;
             font-weight: 600;
             font-size: 14px;
             cursor: pointer;
-            transition: all 0.2s ease;
+            text-align: left;
+            transition: all 0.25s ease;
         }
         .tab-btn:hover {
             color: #ffffff;
-            border-color: #475569;
+            border-color: #14b8a6;
+            background-color: #162238;
         }
         .tab-btn.active {
             background: linear-gradient(135deg, #0d9488 0%, #0f766e 100%);
             color: #ffffff;
-            border-color: #0d9488;
+            border-color: #14b8a6;
             box-shadow: 0 4px 15px rgba(13, 148, 136, 0.3);
         }
 
-        /* Tab Content Panel Mechanics */
+        /* Right Side Downward Panel Area */
+        .dashboard-content-panel {
+            background-color: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 18px;
+            padding: 40px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+            min-height: 480px;
+        }
         .tab-panel {
             display: none;
         }
         .tab-panel.active {
             display: block;
-            animation: fadeIn 0.4s ease;
+            animation: downwardSlideIn 0.4s cubic-bezier(0.16, 1, 0.3, 1);
         }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(5px); }
+        @keyframes downwardSlideIn {
+            from { opacity: 0; transform: translateY(-15px); }
             to { opacity: 1; transform: translateY(0); }
         }
 
-        /* Internal Matrix Element Grids */
-        .sub-program-grid {
+        /* Downward Cards System inside Tabs */
+        .sub-program-downward-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
             gap: 20px;
         }
         .sub-card {
-            background-color: #121b2e;
+            background-color: #111827;
             border: 1px solid #334155;
-            border-radius: 10px;
+            border-radius: 12px;
             padding: 24px;
-            transition: transform 0.2s;
+            transition: all 0.25s ease;
         }
         .sub-card:hover {
-            transform: translateY(-3px);
+            transform: translateY(-4px);
             border-color: #14b8a6;
+            box-shadow: 0 8px 20px rgba(20, 184, 166, 0.1);
         }
         .sub-card h4 {
             color: #ffffff;
-            font-size: 18px;
-            margin-bottom: 10px;
+            font-size: 17px;
+            margin-bottom: 12px;
             font-weight: 700;
         }
         .sub-card p {
             font-size: 13.5px;
             color: #94a3b8;
+            line-height: 1.6;
         }
 
-        /* Placement & Registration Custom Forms */
+        /* Forms Layout Structure */
         .form-wrapper {
-            max-width: 650px;
+            max-width: 600px;
             margin: 0 auto;
-            background-color: #121b2e;
+            background-color: #111827;
             padding: 35px;
-            border-radius: 12px;
+            border-radius: 14px;
             border: 1px solid #334155;
         }
         .form-group {
@@ -263,7 +285,7 @@
             width: 100%;
             background-color: #1e293b;
             border: 1px solid #334155;
-            border-radius: 6px;
+            border-radius: 8px;
             padding: 12px 16px;
             color: #ffffff;
             font-size: 14.5px;
@@ -278,78 +300,69 @@
             background: linear-gradient(135deg, #0d9488 0%, #0f766e 100%);
             color: #ffffff;
             border: none;
-            padding: 14px;
-            border-radius: 6px;
+            padding: 15px;
+            border-radius: 8px;
             font-weight: 700;
             font-size: 15px;
             cursor: pointer;
-            transition: background 0.2s;
+            transition: all 0.2s;
         }
         .btn-submit:hover {
-            box-shadow: 0 4px 15px rgba(13, 148, 136, 0.4);
+            box-shadow: 0 5px 15px rgba(13, 148, 136, 0.4);
         }
 
-        /* Packages Grid Layout */
-        .grid-section { padding: 80px 0; background-color: #121b2e; }
-        .section-title {
-            text-align: center;
-            font-size: 32px;
-            color: #ffffff;
-            font-weight: 700;
-            margin-bottom: 15px;
-        }
-        .section-subtitle {
-            text-align: center;
-            color: #94a3b8;
-            margin-bottom: 40px;
-            font-size: 16px;
-        }
+        /* Packages Grid Section */
+        .grid-section { padding: 90px 0; background-color: #0b1329; }
         .program-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
         }
         .program-card {
             background-color: #1e293b;
-            padding: 40px 30px;
-            border-radius: 12px;
+            padding: 45px 35px;
+            border-radius: 16px;
             border: 1px solid #334155;
             position: relative;
             transition: all 0.3s ease;
         }
         .program-card.popular {
             border-color: #14b8a6;
-            box-shadow: 0 10px 30px rgba(20, 184, 166, 0.1);
+            box-shadow: 0 15px 35px rgba(20, 184, 166, 0.15);
         }
         .badge {
             position: absolute;
             top: -15px;
-            right: 20px;
+            right: 25px;
             background-color: #14b8a6;
             color: #ffffff;
-            padding: 4px 12px;
+            padding: 5px 14px;
             border-radius: 20px;
-            font-size: 12px;
+            font-size: 11px;
             font-weight: 700;
             text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
-        .program-card h3 { font-size: 22px; color: #ffffff; margin-bottom: 15px; font-weight: 700; }
+        .program-card h3 { font-size: 23px; color: #ffffff; margin-bottom: 15px; font-weight: 700; }
         .program-card .price { font-size: 24px; color: #14b8a6; font-weight: 800; margin-bottom: 20px; }
         .program-card p { font-size: 14.5px; color: #94a3b8; text-align: justify; }
 
         /* Media Gallery System */
-        .media-gallery { padding: 80px 0; background-color: #0f172a; }
+        .media-gallery { padding: 90px 0; background-color: #0f172a; }
         .gallery-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-            gap: 25px;
-            margin-top: 40px;
+            gap: 30px;
         }
         .gallery-item {
             background-color: #1e293b;
-            border-radius: 12px;
+            border-radius: 14px;
             overflow: hidden;
             border: 1px solid #334155;
+            transition: transform 0.3s ease;
+        }
+        .gallery-item:hover {
+            transform: scale(1.02);
         }
         .gallery-item img, .gallery-item video {
             width: 100%;
@@ -358,39 +371,38 @@
             display: block;
         }
         .gallery-caption {
-            padding: 20px;
+            padding: 22px;
             font-size: 14.5px;
             color: #94a3b8;
             text-align: center;
-            line-height: 1.5;
         }
 
         /* Editorial Content Section */
-        .article-section { padding: 90px 0; background-color: #121b2e; }
+        .article-section { padding: 100px 0; background-color: #0b1329; }
         .article-wrapper {
             background-color: #1e293b;
-            border-radius: 16px;
+            border-radius: 20px;
             border: 1px solid #334155;
-            padding: 50px;
+            padding: 60px;
         }
-        .article-wrapper h2 { font-size: 28px; color: #ffffff; margin-bottom: 25px; font-weight: 700; }
-        .article-wrapper h3 { font-size: 20px; color: #14b8a6; margin: 35px 0 12px 0; font-weight: 600; }
-        .article-wrapper p { font-size: 15.5px; color: #cbd5e1; margin-bottom: 20px; text-align: justify; }
+        .article-wrapper h2 { font-size: 30px; color: #ffffff; margin-bottom: 25px; font-weight: 700; }
+        .article-wrapper h3 { font-size: 21px; color: #14b8a6; margin: 35px 0 12px 0; font-weight: 600; }
+        .article-wrapper p { font-size: 15.5px; color: #cbd5e1; margin-bottom: 25px; text-align: justify; }
         
         .alert-callout {
             background: rgba(20, 184, 166, 0.1);
             border-left: 4px solid #14b8a6;
-            padding: 24px;
-            margin: 30px 0;
-            border-radius: 0 8px 8px 0;
+            padding: 26px;
+            margin: 35px 0;
+            border-radius: 0 10px 10px 0;
         }
         .alert-callout p { font-style: italic; margin-bottom: 0; color: #2dd4bf; }
 
-        /* Footer Authority Layout */
+        /* Footer Layout */
         footer {
-            background-color: #090d16;
+            background-color: #060b18;
             color: #64748b;
-            padding: 60px 0 30px 0;
+            padding: 70px 0 35px 0;
             font-size: 14px;
             border-top: 1px solid #1e293b;
         }
@@ -398,26 +410,30 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 40px;
-            text-align: left;
-            margin-bottom: 40px;
         }
-        .footer-col h4 { color: #ffffff; font-size: 16px; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 1px; }
+        .footer-col h4 { color: #ffffff; font-size: 16px; margin-bottom: 18px; text-transform: uppercase; letter-spacing: 1px; }
         .footer-col p { color: #94a3b8; }
         .footer-bottom {
             text-align: center;
-            padding-top: 30px;
+            padding-top: 35px;
+            margin-top: 40px;
             border-top: 1px solid #1e293b;
             font-size: 12px;
         }
 
+        /* Adaptive Mobile Breakdown Mechanics */
+        @media (max-width: 992px) {
+            .hero-grid { grid-template-columns: 1fr; text-align: center; }
+            .hero-text-side { text-align: center; }
+            .hero-banner-img { transform: none !important; max-width: 500px; margin: 0 auto; }
+            .dashboard-vertical-layout { grid-template-columns: 1fr; }
+            .dashboard-tabs-vertical { position: static; flex-direction: row; overflow-x: auto; padding-bottom: 10px; }
+            .tab-btn { white-space: nowrap; }
+        }
         @media (max-width: 768px) {
-            .hero h1 { font-size: 28px; }
-            .article-wrapper { padding: 30px 20px; }
-            .footer-grid { grid-template-columns: 1fr; text-align: center; }
-            .gallery-grid { grid-template-columns: 1fr; }
-            .hero-banner-container { margin: 20px auto 0 auto; }
-            .dashboard-tabs { flex-direction: column; }
-            .dashboard-container { padding: 20px; }
+            .hero-text-side h1 { font-size: 30px; }
+            .article-wrapper { padding: 35px 25px; }
+            .section-title { font-size: 28px; }
         }
     </style>
 </head>
@@ -439,169 +455,162 @@
         </div>
     </header>
 
-    <!-- Main Header/Hero Visual Banner -->
-    <div class="hero-banner-container">
-        <img class="hero-banner-img" src="https://raw.githubusercontent.com/gyoutrain-lab/ETKGlobal/main/Header%20Cr.jpg" alt="ETK Global Corporate Accent Banner">
-    </div>
-
-    <section class="hero">
-        <div class="container">
-            <h1>Monopoli Pasar Internasional: Penguasaan Bahasa Inggris Otoritatif Melalui Persuasive Positioning System (PPS)</h1>
-            <p>Penyelarasan kompetensi komunikasi berbasis matriks Fluency, Accuracy, Coherency, dan Content. Akselerasi penajaman evaluasi IELTS target Band 9 guna mengubah posisi tawar Anda: bukan lagi sebagai pelamar pasif, melainkan konsultan strategis berdaya nilai tinggi.</p>
-            <a href="#dashboard" class="btn-cta">Akses Dashboard Pilihan Program</a>
+    <section class="hero-split-section">
+        <div class="container hero-grid">
+            <div class="hero-text-side">
+                <h1>Monopoli Pasar Internasional: Penguasaan Bahasa Inggris Otoritatif Melalui Persuasive Positioning System (PPS)</h1>
+                <p>Penyelarasan kompetensi komunikasi berbasis matriks Fluency, Accuracy, Coherency, dan Content. Akselerasi penajaman evaluasi IELTS target Band 9 guna mengubah posisi tawar Anda: bukan lagi sebagai pelamar pasif, melainkan posisi strategis berdaya nilai tinggi.</p>
+                <a href="#dashboard" class="btn-cta">Akses Portal Dashboard Program</a>
+            </div>
+            <div class="hero-image-side">
+                <img class="hero-banner-img" src="https://raw.githubusercontent.com/gyoutrain-lab/ETKGlobal/main/Header%20Cr.jpg" alt="ETK Global Corporate Accent Banner">
+            </div>
         </div>
     </section>
 
-    <!-- ==========================================================================
-        DASHBOARD INTERAKTIF UTAMA (ENGLISH, MARKET ANALYSIS & REGISTRATION)
-        ========================================================================== -->
     <section class="dashboard-section" id="dashboard">
         <div class="container">
             <h2 class="section-title">Corporate Portal & Matriks Program</h2>
-            <p class="section-subtitle">Pilih modul di bawah untuk meninjau detail program, jalur belajar, simulasi penempatan, dan registrasi.</p>
+            <p class="section-subtitle">Gunakan navigator vertikal untuk memicu visual alur data program secara downward di kanan.</p>
             
-            <div class="dashboard-container">
-                <!-- Navigasi Tab Utama -->
-                <div class="dashboard-tabs">
-                    <button class="tab-btn active" onclick="switchTab(event, 'english-skills')">English Skills</button>
-                    <button class="tab-btn" onclick="switchTab(event, 'market-analysis')">Market Analysis Application</button>
-                    <button class="tab-btn" onclick="switchTab(event, 'learning-options')">Pilihan Belajar</button>
-                    <button class="tab-btn" onclick="switchTab(event, 'placement-test')">Placement Test</button>
-                    <button class="tab-btn" onclick="switchTab(event, 'registration')">Registrasi Resmi</button>
+            <div class="dashboard-vertical-layout">
+                
+                <div class="dashboard-tabs-vertical">
+                    <button class="tab-btn active" onclick="switchTab(event, 'english-skills')">English Skills Matrix</button>
+                    <button class="tab-btn" onclick="switchTab(event, 'market-analysis')">Market Analytics</button>
+                    <button class="tab-btn" onclick="switchTab(event, 'learning-options')">Metode Pembelajaran</button>
+                    <button class="tab-btn" onclick="switchTab(event, 'placement-test')">Placement Test Portal</button>
+                    <button class="tab-btn" onclick="switchTab(event, 'registration')">Registrasi Resmi Keanggotaan</button>
                 </div>
 
-                <!-- PANEL 1: ENGLISH SKILLS -->
-                <div id="english-skills" class="tab-panel active">
-                    <div class="sub-program-grid">
-                        <div class="sub-card">
-                            <h4>English Basic</h4>
-                            <p>Restrukturisasi fondasi mekanika bahasa, pembenahan tata bahasa esensial, dan penghapusan kesalahan sintaksis mendasar.</p>
-                        </div>
-                        <div class="sub-card">
-                            <h4>English for General Conversation</h4>
-                            <p>Pengembangan kelancaran berbicara aktif serta penguasaan diksi kontekstual untuk interaksi sosial berskala internasional.</p>
-                        </div>
-                        <div class="sub-card">
-                            <h4>English for Public Speaking</h4>
-                            <p>Penguasaan kontrol panggung, manipulasi intonasi persuasif, dan penyampaian presentasi korporat yang berbobot.</p>
-                        </div>
-                        <div class="sub-card">
-                            <h4>English for Job Interview</h4>
-                            <p>Strategi taktis menjawab pertanyaan menjebak ekspatriat dengan memposisikan diri sebagai konsultan eksternal pembawa solusi bisnis.</p>
-                        </div>
-                        <div class="sub-card">
-                            <h4>English for Nursing Care Plan</h4>
-                            <p>Aplikasi penguasaan terminologi medis dan dokumentasi asuhan keperawatan berbasis standar kompetensi profesional global.</p>
-                        </div>
-                        <div class="sub-card">
-                            <h4>English for Nursing Prometric Test</h4>
-                            <p>Pelatihan intensif pemecahan studi kasus medis tingkat tinggi khusus persiapan kelulusan ujian lisensi Prometric internasional.</p>
-                        </div>
-                        <div class="sub-card">
-                            <h4>English for IELTS Test</h4>
-                            <p>Akselerasi pencapaian target evaluasi IELTS Band 9 melalui dekonstruksi total terhadap seluruh komponen penilaian resmi.</p>
-                        </div>
-                        <div class="sub-card">
-                            <h4>English for TOEFL Preparation Test</h4>
-                            <p>Pembongkaran komprehensif algoritma tes TOEFL guna mendongkrak skor secara signifikan dalam waktu singkat.</p>
-                        </div>
-                        <div class="sub-card">
-                            <h4>English for Kids</h4>
-                            <p>Metode pengenalan dan pembiasaan komunikasi bahasa Inggris interaktif sejak dini menggunakan pendekatan aktif psikologi anak.</p>
+                <div class="dashboard-content-panel">
+                    
+                    <div id="english-skills" class="tab-panel active">
+                        <div class="sub-program-downward-grid">
+                            <div class="sub-card">
+                                <h4>English Basic</h4>
+                                <p>Restrukturisasi fondasi mekanika bahasa, pembenahan tata bahasa esensial, dan penghapusan kesalahan sintaksis mendasar.</p>
+                            </div>
+                            <div class="sub-card">
+                                <h4>English for General Conversation</h4>
+                                <p>Pengembangan kelancaran berbicara aktif serta penguasaan diksi kontekstual untuk interaksi sosial berskala internasional.</p>
+                            </div>
+                            <div class="sub-card">
+                                <h4>English for Public Speaking</h4>
+                                <p>Penguasaan kontrol panggung, manipulasi intonasi persuasif, dan penyampaian presentasi korporat yang berbobot.</p>
+                            </div>
+                            <div class="sub-card">
+                                <h4>English for Job Interview</h4>
+                                <p>Strategi taktis menjawab pertanyaan menjebak ekspatriat dengan memposisikan diri sebagai konsultan eksternal pembawa solusi bisnis.</p>
+                            </div>
+                            <div class="sub-card">
+                                <h4>English for Nursing Care Plan</h4>
+                                <p>Aplikasi penguasaan terminologi medis dan dokumentasi asuhan keperawatan berbasis standar kompetensi profesional global.</p>
+                            </div>
+                            <div class="sub-card">
+                                <h4>English for Nursing Prometric Test</h4>
+                                <p>Pelatihan intensif pemecahan studi kasus medis tingkat tinggi khusus persiapan kelulusan ujian lisensi Prometric internasional.</p>
+                            </div>
+                            <div class="sub-card">
+                                <h4>English for IELTS Test</h4>
+                                <p>Akselerasi pencapaian target evaluasi IELTS Band 9 melalui dekonstruksi total terhadap seluruh komponen penilaian resmi.</p>
+                            </div>
+                            <div class="sub-card">
+                                <h4>English for TOEFL Preparation Test</h4>
+                                <p>Pembongkaran komprehensif algoritma tes TOEFL guna mendongkrak skor secara signifikan dalam waktu singkat.</p>
+                            </div>
+                            <div class="sub-card">
+                                <h4>English for Kids</h4>
+                                <p>Metode pengenalan dan pembiasaan komunikasi bahasa Inggris interaktif sejak dini menggunakan pendekatan aktif psikologi anak.</p>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- PANEL 2: MARKET ANALYSIS APPLICATION -->
-                <div id="market-analysis" class="tab-panel">
-                    <div class="sub-program-grid">
-                        <div class="sub-card">
-                            <h4>Bollinger Band Integration</h4>
-                            <p>Analisis volatilitas pasar, identifikasi jenuh beli atau jenuh jual, dan pemanfaatan deviasi standar dalam pengambilan keputusan investasi.</p>
-                        </div>
-                        <div class="sub-card">
-                            <h4>Bandarmologi Matrix</h4>
-                            <p>Pembongkaran jejak akumulasi dan distribusi volume transaksi untuk membaca pergerakan pasar secara presisi.</p>
-                        </div>
-                        <div class="sub-card">
-                            <h4>Advanced Market Analytics</h4>
-                            <p>Integrasi indikator teknikal lanjutan guna menyusun rencana perdagangan yang objektif dan terukur.</p>
+                    <div id="market-analysis" class="tab-panel">
+                        <div class="sub-program-downward-grid">
+                            <div class="sub-card">
+                                <h4>Bollinger Band Integration</h4>
+                                <p>Analisis volatilitas pasar, identifikasi jenuh beli atau jenuh jual, dan pemanfaatan deviasi standar dalam pengambilan keputusan investasi.</p>
+                            </div>
+                            <div class="sub-card">
+                                <h4>Bandarmologi Matrix</h4>
+                                <p>Pembongkaran jejak akumulasi dan distribusi volume transaksi untuk membaca pergerakan pasar secara presisi.</p>
+                            </div>
+                            <div class="sub-card">
+                                <h4>Advanced Market Analytics</h4>
+                                <p>Integrasi indikator teknikal lanjutan guna menyusun rencana perdagangan yang objektif dan terukur.</p>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- PANEL 3: PILIHAN BELAJAR -->
-                <div id="learning-options" class="tab-panel">
-                    <div class="sub-program-grid">
-                        <div class="sub-card">
-                            <h4>Private Class</h4>
-                            <p>Akses bimbingan eksklusif tatap muka satu lawan satu dengan kurikulum yang dikustomisasi penuh sesuai profil kompetensi Anda.</p>
-                        </div>
-                        <div class="sub-card">
-                            <h4>Online Virtual Learning</h4>
-                            <p>Sistem pembelajaran jarak jauh interaktif dengan fleksibilitas ruang tanpa mengurangi kualitas kedalaman materi teknis.</p>
-                        </div>
-                        <div class="sub-card">
-                            <h4>Kelompok Tatap Muka</h4>
-                            <p>Ekosistem belajar grup berskala kecil untuk melatih argumen aktif dan adu retorika di ruang kelas riil ETK Yogyakarta.</p>
+                    <div id="learning-options" class="tab-panel">
+                        <div class="sub-program-downward-grid">
+                            <div class="sub-card">
+                                <h4>Private Class</h4>
+                                <p>Akses bimbingan eksklusif tatap muka satu lawan satu dengan kurikulum yang dikustomisasi penuh sesuai profil kompetensi Anda.</p>
+                            </div>
+                            <div class="sub-card">
+                                <h4>Online Virtual Learning</h4>
+                                <p>Sistem pembelajaran jarak jauh interaktif dengan fleksibilitas ruang tanpa mengurangi kualitas kedalaman materi teknis.</p>
+                            </div>
+                            <div class="sub-card">
+                                <h4>Kelompok Tatap Muka</h4>
+                                <p>Ekosistem belajar grup berskala kecil untuk melatih argumen aktif dan adu retorika di ruang kelas riil ETK Yogyakarta.</p>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- PANEL 4: PLACEMENT TEST -->
-                <div id="placement-test" class="tab-panel">
-                    <div class="form-wrapper">
-                        <h3 style="color:#fff; margin-bottom: 20px; text-align:center;">Pengajuan Simulasi Uji Penempatan</h3>
-                        <p style="font-size:14px; color:#94a3b8; margin-bottom:25px; text-align:center;">Evaluasi awal untuk mengukur parameter Fluency, Accuracy, Coherency, dan Content Anda sebelum penentuan program.</p>
-                        <form onsubmit="sendToWhatsApp(event, 'Placement Test')">
-                            <div class="form-group">
-                                <label>Nama Lengkap Eksekutif</label>
-                                <input type="text" class="form-control" id="placement-name" required placeholder="Contoh: Budi Santoso">
-                            </div>
-                            <div class="form-group">
-                                <label>Estimasi Tingkat Kompetensi Saat Ini</label>
-                                <select class="form-control" id="placement-level">
-                                    <option>Basic / Pemula Dasar</option>
-                                    <option>Intermediate / Menengah</option>
-                                    <option>Advanced / Mahir & Profesional</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label>Fokus Target Evaluasi</label>
-                                <input type="text" class="form-control" id="placement-target" required placeholder="Contoh: IELTS Target Band 7.5 / Lancar Negosiasi Bisnis">
-                            </div>
-                            <button type="submit" class="btn-submit">Mulai Alokasi Jadwal Placement Test</button>
-                        </form>
+                    <div id="placement-test" class="tab-panel">
+                        <div class="form-wrapper">
+                            <h3 style="color:#fff; margin-bottom: 25px; text-align:center;">Pengajuan Simulasi Uji Penempatan</h3>
+                            <form onsubmit="sendToWhatsApp(event, 'Placement Test')">
+                                <div class="form-group">
+                                    <label>Nama Lengkap Eksekutif</label>
+                                    <input type="text" class="form-control" id="placement-name" required placeholder="Contoh: Budi Santoso">
+                                </div>
+                                <div class="form-group">
+                                    <label>Estimasi Tingkat Kompetensi Saat Ini</label>
+                                    <select class="form-control" id="placement-level">
+                                        <option>Basic / Pemula Dasar</option>
+                                        <option>Intermediate / Menengah</option>
+                                        <option>Advanced / Mahir & Profesional</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label>Fokus Target Evaluasi</label>
+                                    <input type="text" class="form-control" id="placement-target" required placeholder="Contoh: IELTS Target Band 7.5 / Lancar Negosiasi Bisnis">
+                                </div>
+                                <button type="submit" class="btn-submit">Mulai Alokasi Jadwal Placement Test</button>
+                            </form>
+                        </div>
                     </div>
-                </div>
 
-                <!-- PANEL 5: REGISTRASI -->
-                <div id="registration" class="tab-panel">
-                    <div class="form-wrapper">
-                        <h3 style="color:#fff; margin-bottom: 20px; text-align:center;">Formulir Registrasi Keanggotaan Resmi</h3>
-                        <p style="font-size:14px; color:#94a3b8; margin-bottom:25px; text-align:center;">Isi data di bawah ini untuk mengunci kuota program eksklusif dan konfirmasi administrasi utama.</p>
-                        <form onsubmit="sendToWhatsApp(event, 'Registrasi Program Resmi')">
-                            <div class="form-group">
-                                <label>Nama Lengkap Pendaftar</label>
-                                <input type="text" class="form-control" id="reg-name" required placeholder="Contoh: Andri Wijaya">
-                            </div>
-                            <div class="form-group">
-                                <label>Pilihan Program Utama</label>
-                                <input type="text" class="form-control" id="reg-program" required placeholder="Contoh: English for Job Interview + Private Class">
-                            </div>
-                            <div class="form-group">
-                                <label>Metode Pembelajaran Terpilih</label>
-                                <select class="form-control" id="reg-method">
-                                    <option>Private Class (Eksklusif)</option>
-                                    <option>Online Virtual Learning</option>
-                                    <option>Kelompok Tatap Muka (Yogyakarta)</option>
-                                </select>
-                            </div>
-                            <button type="submit" class="btn-submit">Kirim Formulir Registrasi Ke WhatsApp Resmi</button>
-                        </form>
+                    <div id="registration" class="tab-panel">
+                        <div class="form-wrapper">
+                            <h3 style="color:#fff; margin-bottom: 25px; text-align:center;">Formulir Registrasi Keanggotaan Resmi</h3>
+                            <form onsubmit="sendToWhatsApp(event, 'Registrasi Program Resmi')">
+                                <div class="form-group">
+                                    <label>Nama Lengkap Pendaftar</label>
+                                    <input type="text" class="form-control" id="reg-name" required placeholder="Contoh: Andri Wijaya">
+                                </div>
+                                <div class="form-group">
+                                    <label>Pilihan Program Utama</label>
+                                    <input type="text" class="form-control" id="reg-program" required placeholder="Contoh: English for Job Interview + Private Class">
+                                </div>
+                                <div class="form-group">
+                                    <label>Metode Pembelajaran Terpilih</label>
+                                    <select class="form-control" id="reg-method">
+                                        <option>Private Class (Eksklusif)</option>
+                                        <option>Online Virtual Learning</option>
+                                        <option>Kelompok Tatap Muka (Yogyakarta)</option>
+                                    </select>
+                                </div>
+                                <button type="submit" class="btn-submit">Kirim Formulir Registrasi Ke WhatsApp Resmi</button>
+                            </form>
+                        </div>
                     </div>
-                </div>
 
+                </div>
             </div>
         </div>
     </section>
@@ -637,6 +646,7 @@
     <section class="media-gallery" id="dokumentasi">
         <div class="container">
             <h2 class="section-title">Atmosfer & Bukti Eksekusi Kelas Riil</h2>
+            <p class="section-subtitle">Visualisasi proses interaksi aktif dan simulasi medis di kampus utama.</p>
             
             <div class="gallery-grid">
                 <div class="gallery-item">
@@ -678,7 +688,7 @@
                 <div class="alert-callout">
                     <p>Penolakan terhadap konten klise atau pola komunikasi robotik oleh pasar global membuktikan bahwa penempatan argumen yang tajam dan penggunaan gaya bahasa manipulatif-persuasif memiliki peran krusial dalam menentukan keberhasilan valuasi profesional.</p>
                 </div>
-                <a href="https://wa.me/6281901685253?text=Saya%20butuh%20jadwal%20Executive%20Assessment%20ETK" target="_blank" class="btn-cta" style="margin-top: 25px;">Ajukan Formulir Assessment Eksekutif</a>
+                <a href="https://wa.me/6281901685253?text=Saya%20butuh%20jadwal%20Executive%20Assessment%20ETK" target="_blank" class="btn-cta" style="margin-top: 15px;">Ajukan Formulir Assessment Eksekutif</a>
             </div>
         </div>
     </section>
@@ -705,11 +715,7 @@
         </div>
     </footer>
 
-    <!-- ==========================================================================
-        CORE ENGINE: DASHBOARD INTERACTIVE JAVASCRIPT CONTROLLER
-        ========================================================================== -->
     <script>
-        // Fungsi Penukar Tab Konten Dashboard
         function switchTab(event, tabId) {
             const panels = document.querySelectorAll('.tab-panel');
             const buttons = document.querySelectorAll('.tab-btn');
@@ -721,7 +727,6 @@
             event.currentTarget.classList.add('active');
         }
 
-        // Engine Pengirim Data Otomatis Form ke API WhatsApp Resmi ETK
         function sendToWhatsApp(event, type) {
             event.preventDefault();
             const targetPhone = "6281901685253";
