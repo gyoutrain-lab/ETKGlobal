@@ -3,611 +3,583 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- INTEGRASI FAVICON & MANIFEST -->
-    <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-    <link rel="shortcut icon" href="favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
-    <link rel="manifest" href="site.webmanifest" />
-
-    <!-- METADATA SEO UTAMA -->
-    <title>Kursus IELTS Band 9 Yogyakarta & English Korporat - ETK Global</title>
-    <meta name="description" content="Kursus IELTS terbaik di Yogyakarta & pelatihan English korporat. Hubungi ETK Global Yogyakarta untuk akselerasi Band 9 dengan metode PPS eksekutif serta silabus lengkap kelas korporat, Prometric, dan komunikasi bisnis.">
-    <meta name="keywords" content="kursus ielts yogyakarta, ielts band 9 jogja, english for job interview jogja, pelatihan bahasa inggris korporat yogyakarta, silabus english corporate, prometric nurse jogja">
-    <meta name="robots" content="index, follow">
-    <meta name="theme-color" content="#0b1329">
-    
-    <link rel="canonical" href="https://gyoutrain-lab.github.io/ETKGlobal/">
-
-    <!-- OPEN GRAPH CONFIGURATION -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://gyoutrain-lab.github.io/ETKGlobal/">
-    <meta property="og:title" content="Kursus IELTS Band 9 Yogyakarta & English Korporat | ETK Global">
-    <meta property="og:description" content="Lembaga pelatihan bahasa Inggris korporat dengan pendekatan PPS, akselerasi IELTS Band 9, dan transformasi karir global di Yogyakarta.">
-    <meta property="og:image" content="https://raw.githubusercontent.com/gyoutrain-lab/ETKGlobal/main/Header%20Cr.jpg">
-
-    <!-- JSON-LD SCHEMA MARKUP -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "EducationalOrganization",
-      "name": "ETK Global Yogyakarta",
-      "description": "Pusat akselerasi komunikasi bisnis, kursus persiapan IELTS Band 9, dan pelatihan Prometric Nursing Test di Yogyakarta.",
-      "url": "https://gyoutrain-lab.github.io/ETKGlobal/",
-      "logo": "https://raw.githubusercontent.com/gyoutrain-lab/ETKGlobal/main/Logo%20ETK%20Cr.png",
-      "telephone": "+62-819-0168-5253",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Panjen Tajem, Maguwoharjo, Depok",
-        "addressLocality": "Sleman",
-        "addressRegion": "Daerah Istimewa Yogyakarta",
-        "postalCode": "55281",
-        "addressCountry": "ID"
-      }
-    }
-    </script>
-
+    <title>ETK Global Yogyakarta - Landing Page & Dashboard</title>
     <style>
-        * {
+        /* CSS Reset & Base */
+        *, *::before, *::after {
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
         }
+        
         html {
             scroll-behavior: smooth;
-        }
-        body {
-            background-color: #0b1329; 
-            color: #cbd5e1;
-            line-height: 1.7;
-        }
-        .container {
-            width: 92%;
-            max-width: 1240px;
-            margin: 0 auto;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f4f6f9;
+            color: #333;
         }
 
-        /* NAVIGATION BAR */
-        header {
-            position: sticky;
+        /* Variables for Colors */
+        :root {
+            --primary-blue: #0f4c81;
+            --primary-red: #c0392b;
+            --dark-blue: #0b3256;
+            --dark-red: #962d22;
+            --accent-gold: #f1c40f;
+            --text-light: #ffffff;
+            --text-dark: #2c3e50;
+            --bg-light: #f8f9fa;
+        }
+
+        /* Premium Integrated Navigation Bar with Soft Cloud/Mist Motif */
+        .navbar {
+            position: fixed;
             top: 0;
-            z-index: 999; 
-            box-shadow: 0 10px 35px rgba(0,0,0,0.6); 
-        }
-        .header-problem-banner {
-            background-color: #dc2626; 
-            padding: 14px 0;
-            text-align: center;
-        }
-        .problem-banner-text {
-            color: #ffffff;
-            font-size: 20px;
-            font-weight: 800;
-        }
-        .problem-banner-text .gold-trigger {
-            color: #facc15; 
-            font-size: 24px;
-            font-weight: 900;
-        }
-
-        /* MODIFIKASI KHUSUS BACKGROUND IMAGE NAVBAR DENGAN GRADASI CAHAYA KANAN */
-        .header-main-bar {
-            background-image: 
-                url('https://raw.githubusercontent.com/gyoutrain-lab/ETKGlobal/main/ETK_Future.png'), 
-                linear-gradient(to left, rgba(20, 184, 166, 0.45) 0%, rgba(13, 148, 136, 0.1) 50%, transparent 100%), 
-                linear-gradient(135deg, #0d9488 0%, #115e59 100%); 
-            background-position: left center, right center, center center;
-            background-repeat: no-repeat, no-repeat, no-repeat;
-            background-size: auto 100%, 100% 100%, cover;
-            border-bottom: 2px solid #14b8a6;
-            padding: 25px 0; 
-        }
-        .header-flex {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .logo-solution-wrapper {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-            position: relative;
-            min-width: 420px; 
-        }
-        .logo img {
-            height: 130px; 
-            width: auto;
-            position: absolute;
-            top: -65px; 
             left: 0;
-        }
-        .solution-callout {
-            display: flex;
-            flex-direction: column;
-            margin-left: 140px;
-        }
-        .solution-tag {
-            font-size: 11px;
-            text-transform: uppercase;
-            font-weight: 900;
-            color: #ffffff; 
-            background-color: #ef4444; 
-            padding: 3px 8px;
-            border-radius: 4px;
-            align-self: flex-start;
-        }
-        .solution-text {
-            color: #facc15; 
-            font-size: 15px;
-            font-weight: 800;
-        }
-        .solution-text span {
-            font-weight: 400;
-            color: #e2fbf7;
-        }
-
-        /* ------------------------------------------------------------- */
-        /* CONFIGURATION: 3D GRADATED DARK BLUE NAVIGATION LINKS         */
-        /* ------------------------------------------------------------- */
-        nav {
-            display: flex;
-            gap: 14px;
-            flex-wrap: wrap;
-        }
-        nav a {
-            text-decoration: none;
-            color: #e2fbf7; 
-            font-weight: 700; 
-            font-size: 15px; 
-            padding: 12px 20px;
-            border-radius: 8px;
-            
-            /* Background Gradasi Soft Dark Blue ke Deep Dark Blue */
-            background: linear-gradient(180deg, #253a66 0%, #121f3d 100%);
-            
-            /* Efek Tekstur Garis Tepi Atas Luar (Highlight Ring) */
-            border-top: 1px solid #3d5a99;
-            border-left: 1px solid #253a66;
-            border-right: 1px solid #253a66;
-            border-bottom: none;
-
-            /* Efek Bayangan 3D Ganda (Kedalaman Tombol & Drop Shadow Semu) */
-            box-shadow: 
-                0 4px 0px #0a1224, 
-                0 6px 15px rgba(0, 0, 0, 0.5),
-                inset 0 1px 2px rgba(255, 255, 255, 0.15);
-                
-            text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.7);
-            transition: all 0.15s cubic-bezier(0.2, 0.8, 0.2, 1);
-            position: relative;
-            top: 0;
-        }
-        
-        /* Efek Interaksi Aksi Hover (Sorotan) */
-        nav a:hover { 
-            color: #ffffff;
-            background: linear-gradient(180deg, #2d477c 0%, #17284e 100%);
-            box-shadow: 
-                0 5px 0px #0a1224, 
-                0 8px 20px rgba(0, 0, 0, 0.6),
-                inset 0 1px 2px rgba(255, 255, 255, 0.25);
-            top: -2px; /* Tombol melayang naik sedikit */
-        }
-
-        /* Efek Interaksi Klik Aktif (Ambles Kebawah Tertekan 3D) */
-        nav a:active {
-            top: 3px; /* Tombol tertekan ke bawah rill */
-            box-shadow: 
-                0 1px 0px #0a1224, 
-                0 2px 5px rgba(0, 0, 0, 0.4),
-                inset 0 1px 4px rgba(0, 0, 0, 0.6);
-        }
-
-        /* HERO LAYOUT */
-        .hero-split-section {
-            padding: 130px 0 80px 0; 
-            background: radial-gradient(circle at 20% 30%, rgba(20, 184, 166, 0.15), transparent 60%);
-        }
-        .hero-grid {
-            display: grid;
-            grid-template-columns: 1.2fr 0.8fr;
-            gap: 40px;
-            align-items: center;
-        }
-        .hero-text-side h1 {
-            font-size: 42px;
-            color: #ffffff;
-            font-weight: 800;
-            margin-bottom: 25px;
-        }
-        .problem-hook-badge {
-            display: inline-block;
-            background-color: #dc2626;
-            color: #ffffff;
-            font-weight: 800;
-            font-size: 13px;
-            padding: 4px 12px;
-            border-radius: 4px;
-            margin-bottom: 15px;
-        }
-        .hero-text-side p {
-            font-size: 18px;
-            color: #94a3b8;
-            margin-bottom: 40px;
-        }
-        .hero-banner-img {
             width: 100%;
-            height: auto;
-            border-radius: 16px;
-            border: 1px solid #14b8a6;
-        }
-        .btn-cta {
-            display: inline-block;
-            background: linear-gradient(135deg, #0d9488 0%, #0f766e 100%);
-            color: #ffffff;
-            text-decoration: none;
-            padding: 16px 40px;
-            border-radius: 8px;
-            font-weight: 700;
-            cursor: pointer;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-        }
-        .btn-cta:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(13, 148, 136, 0.4);
-        }
-        
-        /* DASHBOARD ARCHITECTURE */
-        .dashboard-section { padding: 90px 0; background-color: #0b1329; }
-        .section-title { text-align: center; font-size: 34px; color: #ffffff; font-weight: 700; margin-bottom: 12px; }
-        .section-subtitle { text-align: center; color: #94a3b8; margin-bottom: 50px; }
-        .dashboard-vertical-layout { display: grid; grid-template-columns: 280px 1fr; gap: 40px; }
-        .dashboard-tabs-vertical { display: flex; flex-direction: column; gap: 12px; }
-        
-        .tab-btn {
-            background-color: #111c33; color: #94a3b8; border: 1px solid #1e293b;
-            padding: 16px 20px; border-radius: 10px; font-weight: 600; cursor: pointer; text-align: left;
-            transition: all 0.3s ease;
-        }
-        .tab-btn.active, .tab-btn:hover { background: #0d9488; color: #ffffff; border-color: #14b8a6; }
-        
-        .dashboard-content-panel {
-            background-color: #111c33; border: 1px solid #1e293b;
-            border-radius: 18px; padding: 40px; min-height: 480px;
-        }
-        .tab-panel { display: none; }
-        .tab-panel.active { display: block; }
-        .sub-program-downward-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
-        
-        .sub-card { background-color: #1a263f; border: 1px solid #2e3d59; border-radius: 12px; padding: 24px; }
-        .sub-card-title { color: #ffffff; font-size: 17px; margin-bottom: 12px; font-weight: 700; display: block; }
-
-        /* METODOLOGI PPS SECTION */
-        .methodology-section { padding: 90px 0; background-color: #0b1329; border-top: 1px solid #1e293b; }
-        .methodology-card { background-color: #111c33; border: 1px solid #14b8a6; padding: 40px; border-radius: 16px; margin-top: 30px; }
-        .methodology-card h3 { color: #ffffff; font-size: 24px; margin-bottom: 15px; }
-
-        /* FORMS STRUCTURE */
-        .form-wrapper { max-width: 600px; margin: 0 auto; background-color: #1a263f; padding: 35px; border-radius: 14px; border: 1px solid #2e3d59; }
-        .form-group { margin-bottom: 20px; }
-        .form-group label { display: block; color: #ffffff; font-size: 14px; margin-bottom: 8px; }
-        .form-control { width: 100%; background-color: #111c33; border: 1px solid #2e3d59; border-radius: 8px; padding: 12px 16px; color: #ffffff; outline: none; }
-        .form-control:focus { border-color: #14b8a6; }
-        .btn-submit { width: 100%; background: linear-gradient(135deg, #0d9488 0%, #0f766e 100%); color: #ffffff; border: none; padding: 15px; border-radius: 8px; font-weight: 700; cursor: pointer; }
-
-        /* PACKAGES GRID */
-        .grid-section { padding: 90px 0; background-color: #0b1329; }
-        .program-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-        .program-card { background-color: #111c33; padding: 45px 35px; border-radius: 16px; border: 1px solid #1e293b; display: flex; flex-direction: column; justify-content: space-between; }
-        .program-card h2 { font-size: 23px; color: #ffffff; margin-bottom: 15px; }
-        .program-card .price { font-size: 24px; color: #14b8a6; font-weight: 800; margin-bottom: 20px; }
-        .program-card p { margin-bottom: 25px; }
-
-        /* SILABUS KORPORAT SYSTEM ARCHITECTURE */
-        .corporate-syllabus-wrapper {
-            background-color: #0b1329;
-            padding: 90px 0;
-            border-top: 2px solid #1e293b;
-        }
-        .class-badge {
-            display: inline-block;
-            background-color: #ef4444;
-            color: #ffffff;
-            font-weight: 900;
-            font-size: 12px;
-            text-transform: uppercase;
-            padding: 5px 16px;
-            border-radius: 50px;
-            margin-bottom: 25px;
-            letter-spacing: 1px;
-            box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3);
-        }
-        .section-title-premium {
-            font-size: 32px;
-            color: #ffffff;
-            font-weight: 700;
-            margin-bottom: 40px;
-            border-left: 5px solid #14b8a6;
-            padding-left: 18px;
-        }
-        .timeline-grid {
+            z-index: 1000;
             display: flex;
-            flex-direction: column;
-            gap: 25px;
-            margin-bottom: 60px;
-        }
-        .timeline-card {
-            background-color: #111c33;
-            border: 1px solid #1e293b;
-            border-radius: 12px;
-            padding: 35px;
-            display: grid;
-            grid-template-columns: 180px 1fr;
-            gap: 25px;
-            transition: all 0.3s ease;
-        }
-        .timeline-card:hover {
-            border-color: #14b8a6;
-            transform: translateX(5px);
-        }
-        .time-tag {
-            color: #14b8a6;
-            font-weight: 800;
-            font-size: 20px;
-            text-transform: uppercase;
-        }
-        .timeline-detail h3 {
-            color: #ffffff;
-            font-size: 22px;
-            margin-bottom: 12px;
-        }
-        .timeline-detail ul {
-            margin-left: 20px;
-            color: #94a3b8;
-            margin-top: 10px;
-        }
-        .timeline-detail ul li { margin-bottom: 6px; }
-
-        /* E-MODUL ARCHITECTURE */
-        .emodule-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-            gap: 30px;
-        }
-        .emodule-card {
-            background-color: #111c33;
-            border: 1px solid #1e293b;
-            border-radius: 14px;
-            padding: 35px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-        .module-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: 25px;
-            border-bottom: 1px solid #1e293b;
-            padding-bottom: 15px;
-        }
-        .module-number {
-            font-size: 12px;
-            font-weight: 900;
-            color: #14b8a6;
-            background-color: rgba(20, 184, 166, 0.1);
-            padding: 5px 12px;
-            border-radius: 6px;
-        }
-        .emodule-card h3 { color: #ffffff; font-size: 22px; }
-        .material-block { margin-bottom: 20px; }
-        .material-block h4 { color: #facc15; font-size: 14px; margin-bottom: 8px; text-transform: uppercase; }
-        .material-block p { color: #94a3b8; }
-        .activity-badge {
-            display: inline-block;
-            background-color: #1a263f;
-            color: #14b8a6;
-            font-size: 13px;
-            padding: 4px 12px;
-            border-radius: 6px;
-            margin-top: 12px;
-            font-weight: 700;
-            border: 1px solid rgba(20, 184, 166, 0.2);
-        }
-
-        /* ACTIONS PANEL */
-        .syllabus-action-panel {
-            display: flex;
-            justify-content: center;
             align-items: center;
-            gap: 20px;
-            margin-top: 50px;
+            justify-content: space-between;
+            padding: 10px 4%;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+            transition: all 0.4s ease;
+            
+            /* The base gradient transitioning from a striking red left side to a deep corporate blue right side */
+            background: linear-gradient(135deg, var(--primary-red) 0%, var(--dark-red) 25%, var(--primary-blue) 60%, var(--dark-blue) 100%);
+            
+            /* Embossed soft broken cloud / thin mist motif overlay using CSS gradients and radial blurs */
+            position: relative;
+            overflow: hidden;
         }
-        .btn-close-view {
-            display: inline-block;
-            background-color: #111c33;
-            color: #94a3b8;
+
+        /* Cloud/Mist Overlay Layers for Seamless Gradient Integration */
+        .navbar::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(255,255,255,0.12) 0%, rgba(255,255,255,0.05) 40%, transparent 70%),
+                radial-gradient(circle at 60% 30%, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.03) 35%, transparent 60%),
+                radial-gradient(circle at 85% 70%, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.02) 45%, transparent 75%);
+            filter: blur(8px);
+            mix-blend-mode: overlay;
+            pointer-events: none;
+        }
+
+        /* Embossed/Texture Effect Overlay */
+        .navbar::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.04;
+            background-image: radial-gradient(circle at 50% 50%, #fff 1px, transparent 1px), radial-gradient(circle at 0 0, #fff 1px, transparent 1px);
+            background-size: 8px 8px;
+            pointer-events: none;
+        }
+
+        /* Navbar Logo Container designed to blend perfectly */
+        .navbar-brand {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            z-index: 2;
+        }
+
+        /* Simulated Integrated Logo Image with perfect gradient matching */
+        .navbar-logo-img {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.6) 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: var(--primary-red);
+            box-shadow: inset 0 2px 4px rgba(255,255,255,0.8), 0 4px 10px rgba(0,0,0,0.2);
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+            position: relative;
+            border: 1px solid rgba(255,255,255,0.3);
+        }
+
+        .navbar-title {
+            color: var(--text-light);
+            font-size: 1.4rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-shadow: 1px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .navbar-menu {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+            z-index: 2;
+        }
+
+        .navbar-menu a {
+            color: rgba(255,255,255,0.9);
             text-decoration: none;
-            padding: 16px 35px;
-            border-radius: 8px;
+            font-size: 0.95rem;
             font-weight: 600;
-            border: 1px solid #1e293b;
-            transition: all 0.2s ease;
-            cursor: pointer;
-        }
-        .btn-close-view:hover {
-            background-color: #1e293b;
-            color: #ffffff;
-            border-color: #ef4444;
+            transition: all 0.3s ease;
+            padding: 8px 16px;
+            border-radius: 20px;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
         }
 
-        /* DOKUMENTASI */
-        .media-gallery { padding: 90px 0; background-color: #0b1329; }
-        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
-        .gallery-item { background-color: #111c33; border-radius: 14px; overflow: hidden; border: 1px solid #1e293b; display: flex; flex-direction: column; }
-        .gallery-item img { 
-            width: 100%; 
-            height: auto; 
-            aspect-ratio: 16 / 9; 
-            object-fit: cover;  
-            background-color: #0b1329; 
-            display: block; 
+        .navbar-menu a:hover, .navbar-menu a.active {
+            color: var(--text-light);
+            background: rgba(255, 255, 255, 0.15);
+            box-shadow: inset 0 1px 3px rgba(255,255,255,0.2);
         }
-        .gallery-caption { padding: 22px; font-size: 14.5px; color: #94a3b8; text-align: center; margin-top: auto; border-top: 1px solid #1e293b; }
 
-        /* EXTERNAL RESOURCE LINKS BAR */
-        .external-resources-bar {
-            background-color: #111c33;
-            padding: 20px 0;
-            border-top: 1px solid #1e293b;
-            border-bottom: 1px solid #1e293b;
+        /* Hero Section */
+        .hero {
+            padding-top: 140px;
+            padding-bottom: 80px;
+            background: linear-gradient(rgba(15, 76, 129, 0.05), rgba(192, 57, 43, 0.05));
             text-align: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-left: 20px;
+            padding-right: 20px;
         }
-        .external-resources-bar a {
-            color: #14b8a6;
-            text-decoration: none;
+
+        .hero h1 {
+            font-size: 2.8rem;
+            color: var(--dark-blue);
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #555;
+            max-width: 800px;
+            margin: 0 auto 40px;
+            line-height: 1.6;
+        }
+
+        /* Sections Styling */
+        .section-container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 40px;
+            background: #ffffff;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        .section-title {
+            font-size: 2rem;
+            color: var(--dark-blue);
+            margin-bottom: 25px;
+            border-left: 5px solid var(--primary-red);
+            padding-left: 15px;
+        }
+
+        /* Dashboard Interactive Panel Layout */
+        .dashboard-container {
+            display: table;
+            width: 100%;
+            margin-top: 20px;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid #e2e8f0;
+        }
+
+        .dashboard-row {
+            display: table-row;
+        }
+
+        .dashboard-tabs-vertical {
+            display: table-cell;
+            width: 25%;
+            background: #f8fafc;
+            border-right: 1px solid #e2e8f0;
+            vertical-align: top;
+            padding: 20px 10px;
+        }
+
+        .dashboard-tab-btn {
+            display: block;
+            width: 100%;
+            padding: 14px 20px;
+            background: none;
+            border: none;
+            text-align: left;
+            font-size: 1rem;
             font-weight: 600;
-            margin: 0 20px;
-            font-size: 14px;
+            color: #4a5568;
+            cursor: pointer;
+            border-radius: 8px;
+            margin-bottom: 8px;
+            transition: all 0.3s ease;
         }
-        .external-resources-bar a:hover { text-decoration: underline; }
 
-        /* FOOTER SYSTEM */
-        footer { background-color: #060b18; color: #64748b; padding: 70px 0 35px 0; font-size: 14px; border-top: 1px solid #1e293b; }
-        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 40px; }
-        .footer-col h3 { color: #ffffff; font-size: 16px; margin-bottom: 18px; text-transform: uppercase; font-weight: 700; }
-        .footer-col p { margin-bottom: 10px; }
-        .footer-col a { color: #64748b; text-decoration: none; }
-        .footer-col a:hover { color: #ffffff; }
-        .footer-bottom { text-align: center; padding-top: 35px; margin-top: 40px; border-top: 1px solid #1e293b; }
+        .dashboard-tab-btn:hover, .dashboard-tab-btn.active {
+            background: var(--primary-blue);
+            color: white;
+            box-shadow: 0 4px 12px rgba(15, 76, 129, 0.2);
+        }
 
-        /* RESPONSIVE DESIGN */
-        @media (max-width: 992px) {
-            .logo img { position: static; height: 100px; margin: 0 auto; }
-            .solution-callout { margin-left: 0; align-items: center; text-align: center; }
-            .logo-solution-wrapper { min-width: auto; flex-direction: column; gap: 10px; }
-            .header-flex { flex-direction: column; gap: 20px; }
-            nav { justify-content: center; gap: 10px; }
-            nav a { padding: 10px 14px; font-size: 14px; }
-            .hero-grid { grid-template-columns: 1fr; text-align: center; }
-            .dashboard-vertical-layout { grid-template-columns: 1fr; }
-            .timeline-card { grid-template-columns: 1fr; gap: 10px; padding: 25px; }
-            .syllabus-action-panel { flex-direction: column; width: 100%; gap: 15px; }
-            .btn-close-view, .btn-cta { display: block; width: 100%; text-align: center; }
+        .dashboard-content-panel {
+            display: table-cell;
+            width: 75%;
+            padding: 30px;
+            background: white;
+            vertical-align: top;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        /* Forms Elements */
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #cbd5e1;
+            border-radius: 8px;
+            font-size: 1rem;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        .form-control:focus {
+            border-color: var(--primary-blue);
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            padding: 12px 28px;
+            background: var(--primary-red);
+            color: white;
+            font-weight: 600;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 14px rgba(192, 57, 43, 0.2);
+        }
+
+        .btn:hover {
+            background: var(--dark-red);
+            transform: translateY(-2px);
+        }
+
+        .btn-blue {
+            background: var(--primary-blue);
+            box-shadow: 0 4px 14px rgba(15, 76, 129, 0.2);
+        }
+
+        .btn-blue:hover {
+            background: var(--dark-blue);
+        }
+
+        /* Table Styling */
+        .premium-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        .premium-table th, .premium-table td {
+            padding: 14px;
+            text-align: left;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .premium-table th {
+            background-color: #f1f5f9;
+            color: var(--text-dark);
+            font-weight: 700;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--text-dark);
+            color: white;
+            text-align: center;
+            padding: 30px;
+            margin-top: 60px;
+            font-size: 0.95rem;
+        }
+
+        /* Responsive Layout */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                gap: 15px;
+                padding: 15px;
+            }
+            .navbar-menu {
+                width: 100%;
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+            .dashboard-container, .dashboard-row {
+                display: block;
+            }
+            .dashboard-tabs-vertical, .dashboard-content-panel {
+                display: block;
+                width: 100%;
+            }
+            .dashboard-tabs-vertical {
+                border-right: none;
+                border-bottom: 1px solid #e2e8f0;
+            }
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <div class="header-problem-banner">
-            <div class="container">
-                <div class="problem-banner-text">
-                    Stuck in Local Salary due to English Blocks? Unlock your <span class="gold-trigger">International Career</span> Now!
-                </div>
-            </div>
+    <!-- Integrated Premium Navbar -->
+    <header class="navbar">
+        <div class="navbar-brand">
+            <!-- Perfectly harmonized and blended logo emblem matching the exact soft mist/cloud gradient requested -->
+            <div class="navbar-logo-img">ETK</div>
+            <span class="navbar-title">ETK Global Yogyakarta</span>
         </div>
-        
-        <div class="header-main-bar">
-            <div class="container header-flex">
-                <div class="logo-solution-wrapper">
-                    <div class="logo">
-                        <a href="#home">
-                            <img src="https://raw.githubusercontent.com/gyoutrain-lab/ETKGlobal/main/Logo%20ETK%20Cr.png" alt="ETK Global Kursus Inggris & IELTS Yogyakarta">
-                        </a>
-                    </div>
-                    <div class="solution-callout">
-                        <span class="solution-tag">The Absolute Solution</span>
-                        <div class="solution-text">Akurat, Tepat & Modern <span>untuk Akselerasi Karir Global</span></div>
-                    </div>
-                </div>
-
-                <!-- NAVIGATION BAR DENGAN DESAIN 3D COLOURED GRADATED DARK BLUE -->
-                <nav>
-                    <a href="#dashboard">Dashboard</a>
-                    <a href="#methodology">Metodologi PPS</a>
-                    <a href="#packages">Paket Program</a>
-                    <a href="#corporate-executive-syllabus">Silabus Korporat</a>
-                    <a href="#dokumentasi">Dokumentasi</a>
-                </nav>
-            </div>
-        </div>
+        <ul class="navbar-menu">
+            <li><a href="#dashboard" class="active">Dashboard</a></li>
+            <li><a href="#methodology">Metodologi</a></li>
+            <li><a href="#packages">Paket Kelas</a></li>
+            <li><a href="#test-online">Tes Online</a></li>
+        </ul>
     </header>
 
-    <main id="home">
-        <!-- HERO SECTION -->
-        <section class="hero-split-section">
-            <div class="container hero-grid">
-                <div class="hero-text-side">
-                    <div class="problem-hook-badge">Fakta Kegagalan Karir Global</div>
-                    <h1>Kalah Negosiasi Bisnis & Gagal Tes Internasional Karena Hambatan Struktur Bahasa?</h1>
-                    <p>ETK Global Yogyakarta hadir sebagai solusi mutlak: mengintegrasikan pendekatan Persuasive Positioning System (PPS) untuk mengamankan akselerasi target skor kursus IELTS Band 9 serta penguasaan strategi pelatihan bahasa Inggris bisnis korporat di Yogyakarta.</p>
-                    <a href="#dashboard" class="btn-cta">Akses Portal Dashboard Program</a>
-                </div>
-                <div class="hero-image-side">
-                    <img class="hero-banner-img" src="https://raw.githubusercontent.com/gyoutrain-lab/ETKGlobal/main/Header%20Cr.jpg" alt="Kelas Akselerasi Bahasa Inggris Korporat ETK Yogyakarta">
-                </div>
-            </div>
-        </section>
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Selamat Datang di ETK Global Yogyakarta</h1>
+        <p>Solusi premium andalan Anda untuk menguasai Bahasa Inggris profesi, persiapan IELTS/TOEFL, dan pengembangan kompetensi komunikasi global secara interaktif.</p>
+    </section>
 
-        <!-- DASHBOARD SECTION -->
-        <section class="dashboard-section" id="dashboard">
-            <div class="container">
-                <div class="section-title">Portal Pendaftaran & Program Kursus Bahasa Inggris ETK Global</div>
-                <p class="section-subtitle">Gunakan navigator vertikal untuk memicu visual alur data program secara downward di kanan.</p>
-                
-                <div class="dashboard-vertical-layout">
-                    <div class="dashboard-tabs-vertical">
-                        <button class="tab-btn active" onclick="switchTab(event, 'english-skills')">English Skills Matrix</button>
-                        <button class="tab-btn" onclick="switchTab(event, 'learning-modes')">Metode Pembelajaran</button>
-                        <button class="tab-btn" onclick="switchTab(event, 'placement-test')">Placement Test Portal</button>
-                        <button class="tab-btn" onclick="switchTab(event, 'registration')">Registrasi Resmi</button>
-                    </div>
+    <!-- Main Dashboard Section -->
+    <main id="dashboard" class="section-container">
+        <h2 class="section-title">Interactive Dashboard Panel</h2>
+        
+        <div class="dashboard-container">
+            <div class="dashboard-row">
+                <!-- Vertical Menu Tabs -->
+                <div class="dashboard-tabs-vertical">
+                    <button class="dashboard-tab-btn active" onclick="switchTab(event, 'placement-test')">Placement Test</button>
+                    <button class="dashboard-tab-btn" onclick="switchTab(event, 'registrasi')">Registrasi Anggota</button>
+                    <button class="dashboard-tab-btn" onclick="switchTab(event, 'jadwal')">Jadwal & Info</button>
+                </div>
 
-                    <div class="dashboard-content-panel">
-                        <!-- TAB 1: SKILLS MATRIX -->
-                        <div id="english-skills" class="tab-panel active">
-                            <div class="sub-program-downward-grid">
-                                <div class="sub-card">
-                                    <span class="sub-card-title">English Basic</span>
-                                    <p>Restrukturisasi fondasi mekanika bahasa, pembenahan tata bahasa esensial, dan penghapusan kesalahan sintaksis mendasar.</p>
-                                </div>
-                                <div class="sub-card">
-                                    <span class="sub-card-title">English for General Conversation</span>
-                                    <p>Pengembangan kelancaran berbicara aktif serta penguasaan diksi kontekstual untuk interaksi sosial berskala internasional.</p>
-                                </div>
-                                <div class="sub-card">
-                                    <span class="sub-card-title">English for Public Speaking</span>
-                                    <p>Penguasaan kontrol panggung, manipulasi intonasi persuasif, dan penyampaian presentasi korporat yang berbobot.</p>
-                                </div>
-                                <div class="sub-card">
-                                    <span class="sub-card-title">English for Job Interview</span>
-                                    <p>Strategi taktis menjawab pertanyaan menjebak ekspatriat dengan memposisikan diri sebagai konsultan eksternal pembawa solusi bisnis.</p>
-                                </div>
-                                <div class="sub-card">
-                                    <span class="sub-card-title">English for Nursing Care Plan</span>
-                                    <p>Aplikasi penguasaan terminologi medis dan dokumentasi asuhan keperawatan berbasis standar kompetensi profesional global.</p>
-                                </div>
-                                <div class="sub-card">
-                                    <span class="sub-card-title">English for Nursing Prometric Test</span>
-                                    <p>Pelatihan intensif pemecahan studi kasus medis tingkat tinggi khusus persiapan kelulusan ujian lisensi Prometric internasional.</p>
-                                </div>
-                                <div class="sub-card">
-                                    <span class="sub-card-title">English for IELTS Test</span>
-                                    <p>Akselerasi pencapaian target evaluasi IELTS Band 9 melalui dekonstruksi total terhadap seluruh komponen penilaian resmi di Yogyakarta.</p>
-                                </div>
-                                <div class="sub-card">
-                                    <span class="sub-card-title">English for TOEFL Preparation</span>
-                                    <p>Pembongkaran komprehensif algoritma tes TOEFL guna mendongkrak skor secara signifikan dalam waktu singkat.</p>
-                                </div>
-                            </div>
+                <!-- Tab Contents Panel -->
+                <div class="dashboard-content-panel">
+                    
+                    <!-- Content 1: Placement Test -->
+                    <div id="placement-test" class="tab-content active">
+                        <h3>Formulir Pengajuan Placement Test</h3>
+                        <p style="margin-bottom: 20px; color: #666;">Silakan isi data Anda untuk mendapatkan jadwal uji penempatan level bahasa Inggris resmi dari ETK Global.</p>
+                        
+                        <div class="form-group">
+                            <label for="pt-name">Nama Lengkap</label>
+                            <input type="text" id="pt-name" class="form-control" placeholder="Masukkan nama lengkap Anda">
                         </div>
+                        <div class="form-group">
+                            <label for="pt-program">Program Pilihan Utama</label>
+                            <select id="pt-program" class="form-control">
+                                <option value="IELTS Preparation">IELTS Preparation Course</option>
+                                <option value="TOEFL & Academic English">TOEFL & Academic English</option>
+                                <option value="Corporate Professional English">Corporate Professional English</option>
+                                <option value="General Conversation Focus">General Conversation Focus</option>
+                            </select>
+                        </div>
+                        <button class="btn" onclick="sendToWhatsApp('Placement Test')">Kirim via WhatsApp</button>
                     </div>
+
+                    <!-- Content 2: Registrasi -->
+                    <div id="registrasi" class="tab-content">
+                        <h3>Registrasi Anggota Baru</h3>
+                        <p style="margin-bottom: 20px; color: #666;">Daftarkan diri Anda untuk bergabung ke dalam jaringan ekosistem pembelajaran bahasa berstandar dunia.</p>
+                        
+                        <div class="form-group">
+                            <label for="reg-name">Nama Calon Siswa</label>
+                            <input type="text" id="reg-name" class="form-control" placeholder="Masukkan nama lengkap">
+                        </div>
+                        <div class="form-group">
+                            <label for="reg-phone">Nomor Kontak WhatsApp Active</label>
+                            <input type="tel" id="reg-phone" class="form-control" placeholder="Contoh: 08123456789">
+                        </div>
+                        <button class="btn btn-blue" onclick="sendToWhatsApp('Registrasi Anggota Baru')">Daftar Sekarang</button>
+                    </div>
+
+                    <!-- Content 3: Jadwal -->
+                    <div id="jadwal" class="tab-content">
+                        <h3>Jadwal Terdekat & Kuota Kelas</h3>
+                        <p style="margin-bottom: 15px; color: #666;">Berikut adalah ketersediaan ruang kelas tatap muka maupun online terdekat bulan ini:</p>
+                        
+                        <table class="premium-table">
+                            <thead>
+                                <tr>
+                                    <th>Program Studi</th>
+                                    <th>Metode</th>
+                                    <th>Mulai Kelas</th>
+                                    <th>Status Kuota</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>IELTS Mastery Class</td>
+                                    <td>Hybrid (Yogyakarta)</td>
+                                    <td>1 Agustus 2026</td>
+                                    <td style="color: #e67e22; font-weight: bold;">Tersisa 3 Kursi</td>
+                                </tr>
+                                <tr>
+                                    <td>Executive Business English</td>
+                                    <td>Full Online (Zoom)</td>
+                                    <td>5 Agustus 2026</td>
+                                    <td style="color: #2ecc71; font-weight: bold;">Tersedia</td>
+                                </tr>
+                                <tr>
+                                    <td>Academic Writing Foundation</td>
+                                    <td>Offline Intimate</td>
+                                    <td>10 Agustus 2026</td>
+                                    <td style="color: #c0392b; font-weight: bold;">Penuh</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
                 </div>
             </div>
-        </section>
+        </div>
     </main>
+
+    <!-- Methodology Section -->
+    <section id="methodology" class="section-container">
+        <h2 class="section-title">Metodologi Pembelajaran Kami</h2>
+        <p style="line-height: 1.7; color: #4a5568;">
+            ETK Global menerapkan pendekatan kurikulum komunikatif berbasis luaran riil (Outcome-Based Education). Setiap peserta didik akan dibimbing melalui skema simulasi otentik, umpan balik personal dari pengajar tersertifikasi internasional, serta modul komprehensif yang dirancang khusus guna mencapai skor target dalam waktu yang terukur.
+        </p>
+    </section>
+
+    <!-- Packages Section -->
+    <section id="packages" class="section-container">
+        <h2 class="section-title">Pilihan Paket Kelas Unggulan</h2>
+        <p style="line-height: 1.7; color: #4a5568; margin-bottom: 15px;">
+            Kami menyediakan berbagai pilihan paket fleksibel yang disesuaikan dengan kebutuhan karir dan studi akademis Anda, mulai dari kelas privat intensif hingga regular corporate training.
+        </p>
+    </section>
+
+    <!-- Online Test Section -->
+    <section id="test-online" class="section-container">
+        <h2 class="section-title">Akses Tes Online & Pengujian Mandiri</h2>
+        <p style="margin-bottom: 20px; color: #4a5568;">Uji kesiapan kebahasaan Anda langsung melalui platform laboratorium tes IELTS interaktif mandiri yang telah kami sediakan di bawah ini:</p>
+        <a href="https://gyoutrain-lab.github.io/ielts-test-platform" target="_blank" rel="noopener noreferrer" class="btn btn-blue">Buka Platform Ujian IELTS Lab ↗</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 ETK Global Yogyakarta. All Rights Reserved. Kebijakan Privasi & Ketentuan Layanan.</p>
+    </footer>
+
+    <!-- JavaScript Interactive Logic Code -->
+    <script>
+        // Interactive Dashboard Section Tab Switcher
+        function switchTab(evt, tabId) {
+            var i, tabcontent, tablinks;
+            
+            // Hide all tab elements
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+                tabcontent[i].classList.remove("active");
+            }
+            
+            // Remove active status from all vertical buttons
+            tablinks = document.getElementsByClassName("dashboard-tab-btn");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].classList.remove("active");
+            }
+            
+            // Show current target active panel
+            const targetTab = document.getElementById(tabId);
+            targetTab.style.display = "block";
+            targetTab.classList.add("active");
+            evt.currentTarget.classList.add("active");
+        }
+
+        // WhatsApp Custom Form Formatter and Redirection Link 
+        function sendToWhatsApp(type) {
+            const adminPhoneNumber = "628123456789"; // Ganti dengan nomor WhatsApp Admin resmi ETK
+            let message = "";
+
+            if (type === 'Placement Test') {
+                const name = document.getElementById('pt-name').value;
+                const program = document.getElementById('pt-program').value;
+                
+                if(!name) {
+                    alert('Mohon isi nama lengkap Anda terlebih dahulu.');
+                    return;
+                }
+                
+                message = `Halo Admin ETK Global Yogyakarta,%0A%0ASaya ingin mengajukan jadwal *Placement Test*. Berikut data diri saya:%0A- *Nama*: ${name}%0A- *Program Pilihan*: ${program}%0A%0AMohon info jadwal terdekat. Terima kasih!`;
+            } else if (type === 'Registrasi Anggota Baru') {
+                const name = document.getElementById('reg-name').value;
+                const phone = document.getElementById('reg-phone').value;
+                
+                if(!name || !phone) {
+                    alert('Mohon isi nama dan nomor kontak Anda terlebih dahulu.');
+                    return;
+                }
+                
+                message = `Halo Admin ETK Global Yogyakarta,%0A%0ASaya tertarik untuk melakukan *Registrasi Anggota Baru*. Berikut adalah data kontak saya:%0A- *Nama*: ${name}%0A- *No. WhatsApp*: ${phone}%0A%0AMohon panduan langkah pendaftaran selanjutnya. Terima kasih!`;
+            }
+
+            // Open the dynamic official direct link API WhatsApp
+            window.open(`https://api.whatsapp.com/send?phone=${adminPhoneNumber}&text=${message}`, '_blank');
+        }
+
+        // Auto highlight current navbar section when scrolling
+        window.addEventListener('scroll', () => {
+            let current = '';
+            const sections = document.querySelectorAll('main, section');
+            const navLi = document.querySelectorAll('.navbar-menu a');
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (pageYOffset >= sectionTop - 160) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLi.forEach(a => {
+                a.classList.remove('active');
+                if (a.getAttribute('href').includes(current)) {
+                    a.classList.add('active');
+                }
+            });
+        });
+    </script>
 </body>
 </html>
