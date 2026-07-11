@@ -142,13 +142,26 @@
         }
 
         /* ------------------------------------------------------------- */
-        /* CONFIGURATION: 3D GRADATED DARK BLUE NAVIGATION LINKS         */
+        /* UPDATE: BACKGROUND IMAGE ON THE TOP RIGHT CORNER OF NAV BAR  */
         /* ------------------------------------------------------------- */
         nav {
             display: flex;
             gap: 14px;
             flex-wrap: wrap;
+            
+            /* Penambahan ruang aman di sebelah kanan agar menu tidak menabrak penuh background */
+            padding-right: 90px; 
+            
+            /* Integrasi Link Gambar Mentah GitHub Pas di Sudut Kanan Atas */
+            background-image: url('https://raw.githubusercontent.com/gyoutrain-lab/ETKGlobal/main/ETK_Future.png');
+            background-position: right top;
+            background-repeat: no-repeat;
+            background-size: contain; /* Mengunci skala gambar proporsional tinggi container navbar */
+            
+            min-height: 50px;
+            align-items: center;
         }
+        
         nav a {
             text-decoration: none;
             color: #e2fbf7; 
@@ -166,7 +179,7 @@
             border-right: 1px solid #253a66;
             border-bottom: none;
 
-            /* Efek Bayangan 3D Ganda (Kedalaman Tombol & Drop Shadow Semu) */
+            /* Efek Bayangan 3D Ganda */
             box-shadow: 
                 0 4px 0px #0a1224, 
                 0 6px 15px rgba(0, 0, 0, 0.5),
@@ -176,9 +189,10 @@
             transition: all 0.15s cubic-bezier(0.2, 0.8, 0.2, 1);
             position: relative;
             top: 0;
+            z-index: 2; /* Menjaga tombol tetap berada di lapisan atas background */
         }
         
-        /* Efek Interaksi Aksi Hover (Sorotan) */
+        /* Efek Interaksi Aksi Hover */
         nav a:hover { 
             color: #ffffff;
             background: linear-gradient(180deg, #2d477c 0%, #17284e 100%);
@@ -186,12 +200,12 @@
                 0 5px 0px #0a1224, 
                 0 8px 20px rgba(0, 0, 0, 0.6),
                 inset 0 1px 2px rgba(255, 255, 255, 0.25);
-            top: -2px; /* Tombol melayang naik sedikit */
+            top: -2px;
         }
 
-        /* Efek Interaksi Klik Aktif (Ambles Kebawah Tertekan 3D) */
+        /* Efek Interaksi Klik Aktif */
         nav a:active {
-            top: 3px; /* Tombol tertekan ke bawah rill */
+            top: 3px;
             box-shadow: 
                 0 1px 0px #0a1224, 
                 0 2px 5px rgba(0, 0, 0, 0.4),
@@ -482,7 +496,7 @@
             .solution-callout { margin-left: 0; align-items: center; text-align: center; }
             .logo-solution-wrapper { min-width: auto; flex-direction: column; gap: 10px; }
             .header-flex { flex-direction: column; gap: 20px; }
-            nav { justify-content: center; gap: 10px; }
+            nav { justify-content: center; gap: 10px; padding-right: 0; background-image: none; } /* Matikan bg image di mobile agar rapi */
             nav a { padding: 10px 14px; font-size: 14px; }
             .hero-grid { grid-template-columns: 1fr; text-align: center; }
             .dashboard-vertical-layout { grid-template-columns: 1fr; }
@@ -517,7 +531,7 @@
                     </div>
                 </div>
 
-                <!-- NAVIGATION BAR DENGAN DESAIN 3D COLOURED GRADATED DARK BLUE -->
+                <!-- NAVIGATION BAR DENGAN BACKGROUND GRAPHIC DI SUDUT KANAN ATAS -->
                 <nav>
                     <a href="#dashboard">Dashboard</a>
                     <a href="#methodology">Metodologi PPS</a>
