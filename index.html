@@ -19,19 +19,16 @@
             color: #333;
         }
 
-        /* Variables for Colors */
         :root {
             --primary-blue: #0f4c81;
             --primary-red: #c0392b;
             --dark-blue: #0b3256;
             --dark-red: #962d22;
-            --accent-gold: #f1c40f;
             --text-light: #ffffff;
             --text-dark: #2c3e50;
-            --bg-light: #f8f9fa;
         }
 
-        /* Premium Integrated Navigation Bar with Soft Cloud/Mist Motif */
+        /* NAVIGATION BAR DENGAN GRADASI KABUT AWAN LEMBUT */
         .navbar {
             position: fixed;
             top: 0;
@@ -43,17 +40,14 @@
             justify-content: space-between;
             padding: 10px 4%;
             box-shadow: 0 4px 20px rgba(0,0,0,0.15);
-            transition: all 0.4s ease;
             
-            /* The base gradient transitioning from a striking red left side to a deep corporate blue right side */
+            /* Gradasi dasar dari merah ke biru tengah hingga tepi kanan */
             background: linear-gradient(135deg, var(--primary-red) 0%, var(--dark-red) 25%, var(--primary-blue) 60%, var(--dark-blue) 100%);
-            
-            /* Embossed soft broken cloud / thin mist motif overlay using CSS gradients and radial blurs */
             position: relative;
             overflow: hidden;
         }
 
-        /* Cloud/Mist Overlay Layers for Seamless Gradient Integration */
+        /* Efek Embos Motif Awan Pecah / Kabut Tipis */
         .navbar::before {
             content: '';
             position: absolute;
@@ -62,29 +56,14 @@
             width: 100%;
             height: 100%;
             background: 
-                radial-gradient(circle at 20% 50%, rgba(255,255,255,0.12) 0%, rgba(255,255,255,0.05) 40%, transparent 70%),
-                radial-gradient(circle at 60% 30%, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.03) 35%, transparent 60%),
-                radial-gradient(circle at 85% 70%, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.02) 45%, transparent 75%);
-            filter: blur(8px);
+                radial-gradient(circle at 15% 50%, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.05) 40%, transparent 70%),
+                radial-gradient(circle at 55% 30%, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.03) 35%, transparent 60%),
+                radial-gradient(circle at 85% 60%, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.02) 45%, transparent 75%);
+            filter: blur(5px);
             mix-blend-mode: overlay;
             pointer-events: none;
         }
 
-        /* Embossed/Texture Effect Overlay */
-        .navbar::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            opacity: 0.04;
-            background-image: radial-gradient(circle at 50% 50%, #fff 1px, transparent 1px), radial-gradient(circle at 0 0, #fff 1px, transparent 1px);
-            background-size: 8px 8px;
-            pointer-events: none;
-        }
-
-        /* Navbar Logo Container designed to blend perfectly */
         .navbar-brand {
             display: flex;
             align-items: center;
@@ -92,21 +71,15 @@
             z-index: 2;
         }
 
-        /* Simulated Integrated Logo Image with perfect gradient matching */
+        /* Pengaturan Image Logo agar Menyatu dan Selaras */
         .navbar-logo-img {
             width: 50px;
             height: 50px;
-            background: linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.6) 100%);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            color: var(--primary-red);
-            box-shadow: inset 0 2px 4px rgba(255,255,255,0.8), 0 4px 10px rgba(0,0,0,0.2);
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
-            position: relative;
-            border: 1px solid rgba(255,255,255,0.3);
+            object-fit: cover;
+            border-radius: 8px;
+            /* Efek embos tipis pada tepian gambar */
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2), inset 0 0 10px rgba(255,255,255,0.2);
+            border: 1px solid rgba(255,255,255,0.2);
         }
 
         .navbar-title {
@@ -132,20 +105,17 @@
             transition: all 0.3s ease;
             padding: 8px 16px;
             border-radius: 20px;
-            text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
         }
 
         .navbar-menu a:hover, .navbar-menu a.active {
             color: var(--text-light);
             background: rgba(255, 255, 255, 0.15);
-            box-shadow: inset 0 1px 3px rgba(255,255,255,0.2);
         }
 
         /* Hero Section */
         .hero {
             padding-top: 140px;
             padding-bottom: 80px;
-            background: linear-gradient(rgba(15, 76, 129, 0.05), rgba(192, 57, 43, 0.05));
             text-align: center;
             max-width: 1200px;
             margin: 0 auto;
@@ -227,7 +197,6 @@
         .dashboard-tab-btn:hover, .dashboard-tab-btn.active {
             background: var(--primary-blue);
             color: white;
-            box-shadow: 0 4px 12px rgba(15, 76, 129, 0.2);
         }
 
         .dashboard-content-panel {
@@ -265,11 +234,6 @@
             border-radius: 8px;
             font-size: 1rem;
             outline: none;
-            transition: border-color 0.3s;
-        }
-
-        .form-control:focus {
-            border-color: var(--primary-blue);
         }
 
         /* Buttons */
@@ -283,22 +247,10 @@
             border-radius: 8px;
             cursor: pointer;
             text-decoration: none;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 14px rgba(192, 57, 43, 0.2);
-        }
-
-        .btn:hover {
-            background: var(--dark-red);
-            transform: translateY(-2px);
         }
 
         .btn-blue {
             background: var(--primary-blue);
-            box-shadow: 0 4px 14px rgba(15, 76, 129, 0.2);
-        }
-
-        .btn-blue:hover {
-            background: var(--dark-blue);
         }
 
         /* Table Styling */
@@ -317,7 +269,6 @@
         .premium-table th {
             background-color: #f1f5f9;
             color: var(--text-dark);
-            font-weight: 700;
         }
 
         /* Footer */
@@ -327,21 +278,17 @@
             text-align: center;
             padding: 30px;
             margin-top: 60px;
-            font-size: 0.95rem;
         }
 
-        /* Responsive Layout */
         @media (max-width: 768px) {
             .navbar {
                 flex-direction: column;
                 gap: 15px;
-                padding: 15px;
             }
             .navbar-menu {
                 width: 100%;
                 justify-content: center;
                 flex-wrap: wrap;
-                gap: 10px;
             }
             .dashboard-container, .dashboard-row {
                 display: block;
@@ -350,20 +297,16 @@
                 display: block;
                 width: 100%;
             }
-            .dashboard-tabs-vertical {
-                border-right: none;
-                border-bottom: 1px solid #e2e8f0;
-            }
         }
     </style>
 </head>
 <body>
 
-    <!-- Integrated Premium Navbar -->
+    <!-- Navigation Bar -->
     <header class="navbar">
         <div class="navbar-brand">
-            <!-- Perfectly harmonized and blended logo emblem matching the exact soft mist/cloud gradient requested -->
-            <div class="navbar-logo-img">ETK</div>
+            <!-- IMAGE LOGO DI SINI (Silakan ganti src dengan url/path gambar Anda) -->
+            <img src="logo.png" alt="Logo ETK" class="navbar-logo-img">
             <span class="navbar-title">ETK Global Yogyakarta</span>
         </div>
         <ul class="navbar-menu">
@@ -386,14 +329,12 @@
         
         <div class="dashboard-container">
             <div class="dashboard-row">
-                <!-- Vertical Menu Tabs -->
                 <div class="dashboard-tabs-vertical">
                     <button class="dashboard-tab-btn active" onclick="switchTab(event, 'placement-test')">Placement Test</button>
                     <button class="dashboard-tab-btn" onclick="switchTab(event, 'registrasi')">Registrasi Anggota</button>
                     <button class="dashboard-tab-btn" onclick="switchTab(event, 'jadwal')">Jadwal & Info</button>
                 </div>
 
-                <!-- Tab Contents Panel -->
                 <div class="dashboard-content-panel">
                     
                     <!-- Content 1: Placement Test -->
@@ -503,81 +444,54 @@
         <p>&copy; 2026 ETK Global Yogyakarta. All Rights Reserved. Kebijakan Privasi & Ketentuan Layanan.</p>
     </footer>
 
-    <!-- JavaScript Interactive Logic Code -->
+    <!-- JavaScript Script -->
     <script>
-        // Interactive Dashboard Section Tab Switcher
         function switchTab(evt, tabId) {
             var i, tabcontent, tablinks;
-            
-            // Hide all tab elements
             tabcontent = document.getElementsByClassName("tab-content");
             for (i = 0; i < tabcontent.length; i++) {
                 tabcontent[i].style.display = "none";
                 tabcontent[i].classList.remove("active");
             }
-            
-            // Remove active status from all vertical buttons
             tablinks = document.getElementsByClassName("dashboard-tab-btn");
             for (i = 0; i < tablinks.length; i++) {
                 tablinks[i].classList.remove("active");
             }
-            
-            // Show current target active panel
             const targetTab = document.getElementById(tabId);
             targetTab.style.display = "block";
             targetTab.classList.add("active");
             evt.currentTarget.classList.add("active");
         }
 
-        // WhatsApp Custom Form Formatter and Redirection Link 
         function sendToWhatsApp(type) {
-            const adminPhoneNumber = "628123456789"; // Ganti dengan nomor WhatsApp Admin resmi ETK
+            const adminPhoneNumber = "628123456789"; 
             let message = "";
 
             if (type === 'Placement Test') {
                 const name = document.getElementById('pt-name').value;
                 const program = document.getElementById('pt-program').value;
-                
-                if(!name) {
-                    alert('Mohon isi nama lengkap Anda terlebih dahulu.');
-                    return;
-                }
-                
+                if(!name) { alert('Mohon isi nama lengkap Anda terlebih dahulu.'); return; }
                 message = `Halo Admin ETK Global Yogyakarta,%0A%0ASaya ingin mengajukan jadwal *Placement Test*. Berikut data diri saya:%0A- *Nama*: ${name}%0A- *Program Pilihan*: ${program}%0A%0AMohon info jadwal terdekat. Terima kasih!`;
             } else if (type === 'Registrasi Anggota Baru') {
                 const name = document.getElementById('reg-name').value;
                 const phone = document.getElementById('reg-phone').value;
-                
-                if(!name || !phone) {
-                    alert('Mohon isi nama dan nomor kontak Anda terlebih dahulu.');
-                    return;
-                }
-                
+                if(!name || !phone) { alert('Mohon isi nama dan nomor kontak Anda terlebih dahulu.'); return; }
                 message = `Halo Admin ETK Global Yogyakarta,%0A%0ASaya tertarik untuk melakukan *Registrasi Anggota Baru*. Berikut adalah data kontak saya:%0A- *Nama*: ${name}%0A- *No. WhatsApp*: ${phone}%0A%0AMohon panduan langkah pendaftaran selanjutnya. Terima kasih!`;
             }
-
-            // Open the dynamic official direct link API WhatsApp
             window.open(`https://api.whatsapp.com/send?phone=${adminPhoneNumber}&text=${message}`, '_blank');
         }
 
-        // Auto highlight current navbar section when scrolling
         window.addEventListener('scroll', () => {
             let current = '';
             const sections = document.querySelectorAll('main, section');
             const navLi = document.querySelectorAll('.navbar-menu a');
-            
             sections.forEach(section => {
                 const sectionTop = section.offsetTop;
-                if (pageYOffset >= sectionTop - 160) {
-                    current = section.getAttribute('id');
-                }
+                if (pageYOffset >= sectionTop - 160) { current = section.getAttribute('id'); }
             });
-
             navLi.forEach(a => {
                 a.classList.remove('active');
-                if (a.getAttribute('href').includes(current)) {
-                    a.classList.add('active');
-                }
+                if (a.getAttribute('href').includes(current)) { a.classList.add('active'); }
             });
         });
     </script>
