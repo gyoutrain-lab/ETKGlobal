@@ -107,7 +107,7 @@
             align-items: center;
             gap: 20px;
             position: relative;
-            min-width: 450px; 
+            min-width: 420px; 
         }
         .logo img {
             height: 130px; 
@@ -141,14 +141,62 @@
             color: #e2fbf7;
         }
 
+        /* ------------------------------------------------------------- */
+        /* CONFIGURATION: 3D GRADATED DARK BLUE NAVIGATION LINKS         */
+        /* ------------------------------------------------------------- */
+        nav {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
         nav a {
             text-decoration: none;
             color: #e2fbf7; 
             font-weight: 700; 
-            margin-left: 25px; 
-            font-size: 18px; 
+            font-size: 15px; 
+            padding: 12px 20px;
+            border-radius: 8px;
+            
+            /* Background Gradasi Soft Dark Blue ke Deep Dark Blue */
+            background: linear-gradient(180deg, #253a66 0%, #121f3d 100%);
+            
+            /* Efek Tekstur Garis Tepi Atas Luar (Highlight Ring) */
+            border-top: 1px solid #3d5a99;
+            border-left: 1px solid #253a66;
+            border-right: 1px solid #253a66;
+            border-bottom: none;
+
+            /* Efek Bayangan 3D Ganda (Kedalaman Tombol & Drop Shadow Semu) */
+            box-shadow: 
+                0 4px 0px #0a1224, 
+                0 6px 15px rgba(0, 0, 0, 0.5),
+                inset 0 1px 2px rgba(255, 255, 255, 0.15);
+                
+            text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.7);
+            transition: all 0.15s cubic-bezier(0.2, 0.8, 0.2, 1);
+            position: relative;
+            top: 0;
         }
-        nav a:hover { color: #ffffff; }
+        
+        /* Efek Interaksi Aksi Hover (Sorotan) */
+        nav a:hover { 
+            color: #ffffff;
+            background: linear-gradient(180deg, #2d477c 0%, #17284e 100%);
+            box-shadow: 
+                0 5px 0px #0a1224, 
+                0 8px 20px rgba(0, 0, 0, 0.6),
+                inset 0 1px 2px rgba(255, 255, 255, 0.25);
+            top: -2px; /* Tombol melayang naik sedikit */
+        }
+
+        /* Efek Interaksi Klik Aktif (Ambles Kebawah Tertekan 3D) */
+        nav a:active {
+            top: 3px; /* Tombol tertekan ke bawah rill */
+            box-shadow: 
+                0 1px 0px #0a1224, 
+                0 2px 5px rgba(0, 0, 0, 0.4),
+                inset 0 1px 4px rgba(0, 0, 0, 0.6);
+        }
 
         /* HERO LAYOUT */
         .hero-split-section {
@@ -203,10 +251,6 @@
             transform: translateY(-2px);
             box-shadow: 0 8px 20px rgba(13, 148, 136, 0.4);
         }
-
-        /* ------------------------------------------------------------- */
-        /* UPDATE WARNA CONTAINER: SOFT DARK BLUE CONFIGURATION          */
-        /* ------------------------------------------------------------- */
         
         /* DASHBOARD ARCHITECTURE */
         .dashboard-section { padding: 90px 0; background-color: #0b1329; }
@@ -222,7 +266,6 @@
         }
         .tab-btn.active, .tab-btn:hover { background: #0d9488; color: #ffffff; border-color: #14b8a6; }
         
-        /* Wadah Utama Dashboard (Soft Dark Blue) */
         .dashboard-content-panel {
             background-color: #111c33; border: 1px solid #1e293b;
             border-radius: 18px; padding: 40px; min-height: 480px;
@@ -231,13 +274,11 @@
         .tab-panel.active { display: block; }
         .sub-program-downward-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
         
-        /* Kartu-Kartu di Dalam Dashboard */
         .sub-card { background-color: #1a263f; border: 1px solid #2e3d59; border-radius: 12px; padding: 24px; }
         .sub-card-title { color: #ffffff; font-size: 17px; margin-bottom: 12px; font-weight: 700; display: block; }
 
         /* METODOLOGI PPS SECTION */
         .methodology-section { padding: 90px 0; background-color: #0b1329; border-top: 1px solid #1e293b; }
-        /* Wadah Metodologi PPS (Soft Dark Blue) */
         .methodology-card { background-color: #111c33; border: 1px solid #14b8a6; padding: 40px; border-radius: 16px; margin-top: 30px; }
         .methodology-card h3 { color: #ffffff; font-size: 24px; margin-bottom: 15px; }
 
@@ -252,7 +293,6 @@
         /* PACKAGES GRID */
         .grid-section { padding: 90px 0; background-color: #0b1329; }
         .program-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-        /* Wadah Paket Program (Soft Dark Blue) */
         .program-card { background-color: #111c33; padding: 45px 35px; border-radius: 16px; border: 1px solid #1e293b; display: flex; flex-direction: column; justify-content: space-between; }
         .program-card h2 { font-size: 23px; color: #ffffff; margin-bottom: 15px; }
         .program-card .price { font-size: 24px; color: #14b8a6; font-weight: 800; margin-bottom: 20px; }
@@ -291,7 +331,6 @@
             gap: 25px;
             margin-bottom: 60px;
         }
-        /* Wadah Silabus Timeline (Soft Dark Blue) */
         .timeline-card {
             background-color: #111c33;
             border: 1px solid #1e293b;
@@ -330,7 +369,6 @@
             grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
             gap: 30px;
         }
-        /* Wadah E-Modul (Soft Dark Blue) */
         .emodule-card {
             background-color: #111c33;
             border: 1px solid #1e293b;
@@ -372,7 +410,7 @@
             border: 1px solid rgba(20, 184, 166, 0.2);
         }
 
-        /* ACTIONS PANEL (CLOSE & CTA ACTION) */
+        /* ACTIONS PANEL */
         .syllabus-action-panel {
             display: flex;
             justify-content: center;
@@ -398,10 +436,9 @@
             border-color: #ef4444;
         }
 
-        /* DOKUMENTASI / MEDIA GALLERY SYSTEM */
+        /* DOKUMENTASI */
         .media-gallery { padding: 90px 0; background-color: #0b1329; }
         .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
-        /* Wadah Galeri Dokumentasi (Soft Dark Blue) */
         .gallery-item { background-color: #111c33; border-radius: 14px; overflow: hidden; border: 1px solid #1e293b; display: flex; flex-direction: column; }
         .gallery-item img { 
             width: 100%; 
@@ -445,7 +482,8 @@
             .solution-callout { margin-left: 0; align-items: center; text-align: center; }
             .logo-solution-wrapper { min-width: auto; flex-direction: column; gap: 10px; }
             .header-flex { flex-direction: column; gap: 20px; }
-            nav a { margin: 0 10px; font-size: 16px; }
+            nav { justify-content: center; gap: 10px; }
+            nav a { padding: 10px 14px; font-size: 14px; }
             .hero-grid { grid-template-columns: 1fr; text-align: center; }
             .dashboard-vertical-layout { grid-template-columns: 1fr; }
             .timeline-card { grid-template-columns: 1fr; gap: 10px; padding: 25px; }
@@ -479,6 +517,7 @@
                     </div>
                 </div>
 
+                <!-- NAVIGATION BAR DENGAN DESAIN 3D COLOURED GRADATED DARK BLUE -->
                 <nav>
                     <a href="#dashboard">Dashboard</a>
                     <a href="#methodology">Metodologi PPS</a>
