@@ -67,7 +67,7 @@
             width: 92%;
             max-width: 1240px;
             margin: 0 auto;
-            position: relative; /* Menjadi jangkar posisi untuk elemen absolut di dalamnya */
+            position: relative;
         }
 
         /* NAVIGATION BAR SYSTEM */
@@ -98,7 +98,7 @@
             border-bottom: 2px solid #14b8a6;
             padding: 25px 0; 
             position: relative;
-            overflow: visible; /* Mengizinkan gambar raksasa menjuntai ke luar batas bawah navbar */
+            overflow: visible; /* Mengizinkan gambar menjuntai ke luar bawah navbar */
         }
         .header-flex {
             display: flex;
@@ -111,6 +111,7 @@
             gap: 20px;
             position: relative;
             min-width: 420px; 
+            z-index: 10; /* Berada di atas gambar backdrop agar tetap tajam */
         }
         .logo img {
             height: 130px; 
@@ -118,7 +119,7 @@
             position: absolute;
             top: -65px; 
             left: 0;
-            z-index: 10;
+            z-index: 12;
         }
         .solution-callout {
             display: flex;
@@ -145,18 +146,17 @@
             color: #e2fbf7;
         }
 
-        /* ------------------------------------------------------------- */
-        /* CONFIGURATION: NAV CONTAINER & 3D BUTTONS                     */
-        /* ------------------------------------------------------------- */
+        /* CONFIGURATION: NAV CONTAINER (KEMBALI NORMAL & LUAS SEJAJAR) */
         nav {
             display: flex;
             gap: 14px;
             flex-wrap: wrap;
-            /* Jarak aman super lebar di kanan agar tombol tidak tertutup logo raksasa */
-            padding-right: 380px; 
+            padding-right: 0; /* Dikembalikan normal agar tidak terdesak */
             min-height: 50px;
             align-items: center;
             position: relative;
+            width: 100%;
+            justify-content: flex-end; /* Menu berjejer rapi di sisi kanan */
         }
         
         nav a {
@@ -167,16 +167,12 @@
             padding: 12px 20px;
             border-radius: 8px;
             
-            /* Background Gradasi Soft Dark Blue ke Deep Dark Blue */
+            /* Background Gradasi 3D */
             background: linear-gradient(180deg, #253a66 0%, #121f3d 100%);
-            
-            /* Tepi Atas Luar (Highlight Ring) */
             border-top: 1px solid #3d5a99;
             border-left: 1px solid #253a66;
             border-right: 1px solid #253a66;
-            border-bottom: none;
 
-            /* Efek Ganda Mekanika 3D */
             box-shadow: 
                 0 4px 0px #0a1224, 
                 0 6px 15px rgba(0, 0, 0, 0.5),
@@ -186,7 +182,7 @@
             transition: all 0.15s cubic-bezier(0.2, 0.8, 0.2, 1);
             position: relative;
             top: 0;
-            z-index: 5; /* Tombol berada di atas background agar tetap aman di-klik */
+            z-index: 5; /* Di atas backdrop agar aman di-klik */
         }
         
         nav a:hover { 
@@ -207,18 +203,15 @@
                 inset 0 1px 4px rgba(0, 0, 0, 0.6);
         }
 
-        /* ------------------------------------------------------------- */
-        /* UPDATE: ELEMENT LOGO RAKSASA 3X LIPAT + GRADASI HALUS         */
-        /* ------------------------------------------------------------- */
+        /* BACKDROP LOGO RAKSASA MENTOK KIRI DI BELAKANG LOGO UTAMA */
         .nav-future-giant-wrapper {
             position: absolute;
-            /* Dikunci mati pas di sudut kanan atas bar hijau/biru navigasi */
-            right: 0;
-            top: -25px; /* Menjulur presisi dari margin atas (sejajar padding header) */
-            height: 240px; /* Diperbesar 3x lipat menjuntai menembus margin bawah */
+            left: -4%; /* Sedikit keluar batas container untuk efek mentok full margin kiri */
+            top: -25px; /* Selaras sempurna dari margin atas */
+            height: 240px; /* Diperbesar masif hingga menjuntai ke batas bawah */
             width: auto;
-            pointer-events: none; /* Klik user akan menembus gambar ini, tidak mengganggu halaman web */
-            z-index: 1;
+            pointer-events: none; /* Klik user otomatis menembus gambar ini */
+            z-index: 1; /* Berada di belakang navigasi menu */
             display: flex;
             align-items: center;
         }
@@ -227,9 +220,10 @@
             height: 100%;
             width: auto;
             object-fit: contain;
-            /* Efek Gradasi Halus: Sisi kiri transparan memudar, melebar terang ke kanan */
-            -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,0) 15%, rgba(0,0,0,1) 80%);
-            mask-image: linear-gradient(to right, rgba(0,0,0,0) 15%, rgba(0,0,0,1) 80%);
+            /* REVERSE GRADIENT: Kiri tajam/jelas, memudar halus transparan ke kanan arah menu */
+            -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 90%);
+            mask-image: linear-gradient(to right, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 90%);
+            opacity: 0.85; /* Melebur estetik dengan tema warna navbar */
         }
 
         /* HERO LAYOUT */
@@ -376,22 +370,6 @@
         .timeline-detail ul { margin-left: 20px; color: #94a3b8; margin-top: 10px; }
         .timeline-detail ul li { margin-bottom: 6px; }
 
-        /* E-MODUL ARCHITECTURE */
-        .emodule-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 30px; }
-        .emodule-card { background-color: #111c33; border: 1px solid #1e293b; border-radius: 14px; padding: 35px; display: flex; flex-direction: column; justify-content: space-between; }
-        .module-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 25px; border-bottom: 1px solid #1e293b; padding-bottom: 15px; }
-        .module-number { font-size: 12px; font-weight: 900; color: #14b8a6; background-color: rgba(20, 184, 166, 0.1); padding: 5px 12px; border-radius: 6px; }
-        .emodule-card h3 { color: #ffffff; font-size: 22px; }
-        .material-block { margin-bottom: 20px; }
-        .material-block h4 { color: #facc15; font-size: 14px; margin-bottom: 8px; text-transform: uppercase; }
-        .material-block p { color: #94a3b8; }
-        .activity-badge { display: inline-block; background-color: #1a263f; color: #14b8a6; font-size: 13px; padding: 4px 12px; border-radius: 6px; margin-top: 12px; font-weight: 700; border: 1px solid rgba(20, 184, 166, 0.2); }
-
-        /* ACTIONS PANEL */
-        .syllabus-action-panel { display: flex; justify-content: center; align-items: center; gap: 20px; margin-top: 50px; }
-        .btn-close-view { display: inline-block; background-color: #111c33; color: #94a3b8; text-decoration: none; padding: 16px 35px; border-radius: 8px; font-weight: 600; border: 1px solid #1e293b; transition: all 0.2s ease; cursor: pointer; }
-        .btn-close-view:hover { background-color: #1e293b; color: #ffffff; border-color: #ef4444; }
-
         /* DOKUMENTASI */
         .media-gallery { padding: 90px 0; background-color: #0b1329; }
         .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
@@ -399,18 +377,8 @@
         .gallery-item img { width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; background-color: #0b1329; display: block; }
         .gallery-caption { padding: 22px; font-size: 14.5px; color: #94a3b8; text-align: center; margin-top: auto; border-top: 1px solid #1e293b; }
 
-        /* SUPPORTED LINKS */
-        .external-resources-bar { background-color: #111c33; padding: 20px 0; border-top: 1px solid #1e293b; border-bottom: 1px solid #1e293b; text-align: center; }
-        .external-resources-bar a { color: #14b8a6; text-decoration: none; font-weight: 600; margin: 0 20px; font-size: 14px; }
-        .external-resources-bar a:hover { text-decoration: underline; }
-
         /* FOOTER SYSTEM */
         footer { background-color: #060b18; color: #64748b; padding: 70px 0 35px 0; font-size: 14px; border-top: 1px solid #1e293b; }
-        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 40px; }
-        .footer-col h3 { color: #ffffff; font-size: 16px; margin-bottom: 18px; text-transform: uppercase; font-weight: 700; }
-        .footer-col p { margin-bottom: 10px; }
-        .footer-col a { color: #64748b; text-decoration: none; }
-        .footer-col a:hover { color: #ffffff; }
         .footer-bottom { text-align: center; padding-top: 35px; margin-top: 40px; border-top: 1px solid #1e293b; }
 
         /* RESPONSIVE DESIGN */
@@ -420,19 +388,18 @@
             .logo-solution-wrapper { min-width: auto; flex-direction: column; gap: 10px; }
             .header-flex { flex-direction: column; gap: 20px; }
             nav { justify-content: center; gap: 10px; padding-right: 0; }
-            .nav-future-giant-wrapper { display: none; } /* Menyembunyikan logo masif di perangkat mobile agar rapi */
+            .nav-future-giant-wrapper { display: none; } /* Menyembunyikan dekorasi raksasa pada mobile agar bersih */
             nav a { padding: 10px 14px; font-size: 14px; }
             .hero-grid { grid-template-columns: 1fr; text-align: center; }
             .dashboard-vertical-layout { grid-template-columns: 1fr; }
             .timeline-card { grid-template-columns: 1fr; gap: 10px; padding: 25px; }
-            .syllabus-action-panel { flex-direction: column; width: 100%; gap: 15px; }
-            .btn-close-view, .btn-cta { display: block; width: 100%; text-align: center; }
         }
     </style>
 </head>
 <body>
 
     <header>
+        <!-- RED PROBLEM BANNER -->
         <div class="header-problem-banner">
             <div class="container">
                 <div class="problem-banner-text">
@@ -441,6 +408,7 @@
             </div>
         </div>
         
+        <!-- BLUE/TEAL NAVIGATION BAR MAIN -->
         <div class="header-main-bar">
             <div class="container header-flex">
                 <div class="logo-solution-wrapper">
@@ -455,7 +423,7 @@
                     </div>
                 </div>
 
-                <!-- NAVIGATION BAR -->
+                <!-- NAVIGATION MENU (RUANG SEJAJAR HORIZONTAL) -->
                 <nav>
                     <a href="#dashboard">Dashboard</a>
                     <a href="#methodology">Metodologi PPS</a>
@@ -463,9 +431,9 @@
                     <a href="#corporate-executive-syllabus">Silabus Korporat</a>
                     <a href="#dokumentasi">Dokumentasi</a>
                     
-                    <!-- LAYER LOGO RAKSASA 3X LIPAT PAS DI SUDUT KANAN MARGIN NAV BAR -->
+                    <!-- LAYER LOGO RAKSASA MENTOK KIRI DI BELAKANG LOGO UTAMA -->
                     <div class="nav-future-giant-wrapper">
-                        <img src="https://raw.githubusercontent.com/gyoutrain-lab/ETKGlobal/main/ETK_Future.png" alt="ETK Future Giant Graphic">
+                        <img src="https://raw.githubusercontent.com/gyoutrain-lab/ETKGlobal/main/ETK_Future.png" alt="ETK Future Giant Backdrop">
                     </div>
                 </nav>
             </div>
@@ -566,9 +534,6 @@
                             <p>Fokus pada penguasaan kendali panggung dan struktur pembukaan presentasi bisnis internasional.</p>
                         </div>
                     </div>
-                </div>
-                <div class="syllabus-action-panel">
-                    <a href="#packages" class="btn-close-view">&times; Tutup & Kembali ke Atas</a>
                 </div>
             </div>
         </section>
