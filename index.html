@@ -88,7 +88,6 @@
             box-shadow: 0 10px 35px rgba(0,0,0,0.6); 
         }
         
-        /* BANNER MERAH: Gradasi dari kiri (terang) ke kanan (gelap) */
         .header-problem-banner {
             background: linear-gradient(to right, #ef4444 0%, #b91c1c 70%, #991b1b 100%); 
             padding: 12px 0;
@@ -105,7 +104,6 @@
             font-weight: 800;
         }
 
-        /* BAR UTAMA: Gradasi dari kiri (Teal Terang) ke kanan (Teal Gelap/Midnight) */
         .header-main-bar {
             background: linear-gradient(to right, #14b8a6 0%, #0f766e 40%, #115e59 75%, #0f172a 100%); 
             border-bottom: 2px solid #14b8a6;
@@ -161,7 +159,6 @@
             color: #e2fbf7;
         }
 
-        /* MENU NAVIGASI */
         nav {
             display: flex;
             gap: 12px;
@@ -193,11 +190,6 @@
             transform: translateY(-1px);
         }
 
-        nav a:active {
-            transform: translateY(1px);
-        }
-
-        /* LAYER BACKGROUND BACKDROP INDEPENDEN */
         .header-bg-backdrop-layer {
             position: absolute;
             left: 0;
@@ -208,7 +200,6 @@
             z-index: 1; 
             overflow: hidden;
         }
-
         .header-bg-backdrop-layer img {
             height: 100%;
             width: auto;
@@ -216,7 +207,7 @@
             object-position: left center;
             -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,1) 40%, rgba(0,0,0,0) 95%);
             mask-image: linear-gradient(to right, rgba(0,0,0,1) 40%, rgba(0,0,0,0) 95%);
-            opacity: 0.9; /* Sedikit dinaikkan agar menyatu dengan gradasi terang bar */
+            opacity: 0.9; 
         }
 
         /* HERO LAYOUT */
@@ -230,7 +221,6 @@
             gap: 50px;
             align-items: center;
         }
-        
         .hero-text-side h1 {
             font-size: 40px;
             color: #ffffff;
@@ -375,7 +365,7 @@
         .time-tag { color: #14b8a6; font-weight: 800; font-size: 18px; text-transform: uppercase; letter-spacing: 0.05em; }
         .timeline-detail h3 { color: #ffffff; font-size: 20px; font-weight: 700; margin-bottom: 10px; }
 
-        /* DOKUMENTASI BARU */
+        /* DOKUMENTASI */
         .media-gallery { padding: 90px 0; background-color: #0b1329; border-top: 1px solid #1e293b; }
         .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
         .gallery-item { background-color: #111c33; border-radius: 12px; overflow: hidden; border: 1px solid #1e293b; display: flex; flex-direction: column; transition: all 0.3s ease; }
@@ -406,7 +396,6 @@
 <body>
 
     <header>
-        <!-- RED PROBLEM BANNER (GRADIENT LEFT TO RIGHT) -->
         <div class="header-problem-banner">
             <div class="container">
                 <div class="problem-banner-text">
@@ -415,10 +404,7 @@
             </div>
         </div>
         
-        <!-- MAIN NAVIGATION BAR (GRADIENT LEFT TO RIGHT SYNCHRONIZED WITH BACKDROP) -->
         <div class="header-main-bar">
-            
-            <!-- IMAGE LAYER BACKDROP (FADES FROM LEFT TO RIGHT) -->
             <div class="header-bg-backdrop-layer">
                 <img src="https://raw.githubusercontent.com/gyoutrain-lab/ETKGlobal/main/ETK_Future.png" alt="ETK Future Giant Background">
             </div>
@@ -436,7 +422,6 @@
                     </div>
                 </div>
 
-                <!-- NAVIGATION MENU -->
                 <nav>
                     <a href="#dashboard">Dashboard</a>
                     <a href="#methodology">Metodologi PPS</a>
@@ -485,15 +470,23 @@
                                 </div>
                                 <div class="sub-card">
                                     <span class="sub-card-title">English for Corporate Class</span>
-                                    <p>Restrukturisasi fondasi mekanika bahasa, pembenahan tata bahasa eksekutif, dan eksekusi memo bisnis formal.</p>
+                                    <p>Restrukturisasi fondasi mekanika bahasa, pembenahan tata bahasa eksekutif, kemampuan *high-stakes presentation*, dan eksekusi memo bisnis formal.</p>
+                                </div>
+                                <div class="sub-card">
+                                    <span class="sub-card-title">Prometric Nursing Test</span>
+                                    <p>Pelatihan bahas Inggris khusus persiapan ujian lisensi keperawatan internasional (Prometric) untuk penempatan medis global.</p>
                                 </div>
                             </div>
                         </div>
                         <div id="learning-modes" class="tab-panel">
                             <div class="sub-program-downward-grid">
                                 <div class="sub-card" style="border-left: 4px solid #14b8a6;">
-                                    <span class="sub-card-title">Private Class IELTS & Corporate</span>
-                                    <p>Akses bimbingan eksklusif tatap muka satu lawan satu dengan kurikulum yang dikustomisasi penuh sesuai profil kompetensi Anda.</p>
+                                    <span class="sub-card-title">Private Class (IELTS & Corporate)</span>
+                                    <p>Akses bimbingan eksklusif 1-on-1 dengan kurikulum kustomisasi penuh sesuai jadwal eksekutif dan *baseline skill* Anda.</p>
+                                </div>
+                                <div class="sub-card" style="border-left: 4px solid #14b8a6;">
+                                    <span class="sub-card-title">Group Corporate Training</span>
+                                    <p>Pelatihan kolektif berskala korporasi yang dirancang langsung untuk sinkronisasi efisiensi komunikasi tim internal perusahaan.</p>
                                 </div>
                             </div>
                         </div>
@@ -508,64 +501,96 @@
                 <div class="section-title">Metodologi Unggulan: Persuasive Positioning System (PPS)</div>
                 <div class="methodology-card">
                     <h3>Akselerasi Melalui Dekonstruksi Matriks Pengujian</h3>
-                    <p>Dalam program kursus persiapan IELTS Band 9 Yogyakarta, metodologi PPS berfungsi membongkar parameter penilaian penguji (Examiner Matrix).</p>
+                    <p>Dalam program kursus persiapan IELTS Band 9 Yogyakarta, metodologi PPS berfungsi membongkar parameter penilaian penguji (Examiner Matrix), sehingga peserta mampu menyusun respon tertulis maupun lisan dengan pola struktural yang dinilai tinggi oleh sistem evaluasi global.</p>
                 </div>
             </div>
         </section>
 
-        <!-- PACKAGES SECTION -->
+        <!-- PACKAGES SECTION (TERMASUK PLACEMENT TEST) -->
         <section class="grid-section" id="packages">
             <div class="container">
-                <div class="section-title">Paket Program Pilihan Utama</div>
+                <div class="section-title">Paket Program & Placement Evaluasi</div>
                 <div class="program-grid">
+                    <div class="program-card">
+                        <div>
+                            <h2>Diagnostic Placement Test</h2>
+                            <div class="price">Evaluasi Awal</div>
+                            <p>Uji kompetensi awal yang memetakan kelemahan tata bahasa, kesenjangan kosakata, dan performa fonetis sebelum penentuan silabus.</p>
+                        </div>
+                        <a href="https://wa.me/6281901685253" target="_blank" class="btn-cta" style="text-align: center; font-size: 14px; padding: 12px;">Mulai Placement Test &rarr;</a>
+                    </div>
                     <div class="program-card">
                         <div>
                             <h2>IELTS Preparation</h2>
                             <div class="price">Band 9 Goal</div>
-                            <p>Kelas eksklusif dekonstruksi total matriks pengujian IELTS.</p>
+                            <p>Kelas eksklusif dekonstruksi total matriks pengujian IELTS untuk mengejar akselerasi skor maksimal.</p>
                         </div>
-                        <a href="#dashboard" class="btn-cta" style="text-align: center; font-size: 14px; padding: 12px;">Ambil Penempatan &rarr;</a>
+                        <a href="https://wa.me/6281901685253" target="_blank" class="btn-cta" style="text-align: center; font-size: 14px; padding: 12px;">Daftar Kelas &rarr;</a>
+                    </div>
+                    <div class="program-card">
+                        <div>
+                            <h2>Corporate Executive</h2>
+                            <div class="price">E-Modul Included</div>
+                            <p>Program akselerasi bahasa Inggris bisnis terstruktur untuk manajer, ekspatriat, dan profesional korporat.</p>
+                        </div>
+                        <a href="https://wa.me/6281901685253" target="_blank" class="btn-cta" style="text-align: center; font-size: 14px; padding: 12px;">Ambil Program &rarr;</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- SILABUS KORPORAT SECTION -->
+        <!-- SILABUS & E-MODUL KORPORAT LENGKAP (4 TAHAP UTUH) -->
         <section class="corporate-syllabus-wrapper" id="corporate-executive-syllabus">
             <div class="container">
-                <h2 class="section-title-premium">Comprehensive Syllabus (Kurikulum 4 Tahap)</h2>
+                <h2 class="section-title-premium">Comprehensive Syllabus & E-Modul (Kurikulum 4 Tahap)</h2>
                 <div class="timeline-grid">
                     <div class="timeline-card">
                         <div class="time-tag">Tahap 01</div>
                         <div class="timeline-detail">
                             <h3>High-Stakes Corporate Presentation</h3>
-                            <p>Fokus pada penguasaan kendali panggung dan struktur pembukaan presentasi bisnis internasional.</p>
+                            <p>Fokus pada penguasaan kendali panggung, penanganan sesi Q&A yang agresif, dan struktur pembukaan presentasi bisnis internasional yang memikat pemangku kepentingan.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-card">
+                        <div class="time-tag">Tahap 02</div>
+                        <div class="timeline-detail">
+                            <h3>Cross-Border Strategic Negotiation</h3>
+                            <p>Mempelajari taktik diplomasi bahasa, teknik penolakan halus (*hedging*), serta strategi retorika persuasif untuk memenangkan kontrak bisnis global.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-card">
+                        <div class="time-tag">Tahap 03</div>
+                        <div class="timeline-detail">
+                            <h3>Executive Correspondence & Business Reporting</h3>
+                            <p>Restrukturisasi total format penulisan email formal, penyusunan *executive summary*, proposal proyek, serta pelaporan metrik kinerja tahunan secara akurat.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-card">
+                        <div class="time-tag">Tahap 04</div>
+                        <div class="timeline-detail">
+                            <h3>Global Leadership & Management Idioms</h3>
+                            <p>Internalisasi ekspresi idiomatik tingkat tinggi dan manajemen krisis komunikasi verbal untuk memimpin tim multinasional secara otoritatif.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- GALERI DOKUMENTASI BARU -->
+        <!-- GALERI DOKUMENTASI -->
         <section class="media-gallery" id="dokumentasi">
             <div class="container">
                 <div class="section-title">Dokumentasi Ekosistem & Aktivitas ETK Global</div>
                 <p class="section-subtitle">Galeri pelatihan intensif korporat dan akselerasi persiapan tes internasional di Yogyakarta.</p>
                 
                 <div class="gallery-grid">
-                    <!-- SCENE 1 -->
                     <div class="gallery-item">
                         <img src="https://raw.githubusercontent.com/gyoutrain-lab/ETKGlobal/main/Scene1.png" alt="Pelatihan Komunikasi Eksekutif ETK Global">
                         <div class="gallery-caption">Sesi Interaktif Peningkatan Keterampilan Komunikasi Bisnis dan Struktur Korporat</div>
                     </div>
-                    
-                    <!-- SCENE 2 -->
                     <div class="gallery-item">
                         <img src="https://raw.githubusercontent.com/gyoutrain-lab/ETKGlobal/main/Scene2.png" alt="Simulasi Persiapan IELTS Band 9">
                         <div class="gallery-caption">Bimbingan Intensif Bedah Strategi Ujian Internasional dan Akselerasi Skor IELTS</div>
                     </div>
-                    
-                    <!-- SCENE 3 -->
                     <div class="gallery-item">
                         <img src="https://raw.githubusercontent.com/gyoutrain-lab/ETKGlobal/main/Scene3.png" alt="Kelas Presentasi Bisnis Strategis">
                         <div class="gallery-caption">Penerapan Metodologi PPS dalam Simulasi Negosiasi dan High-Stakes Presentation</div>
@@ -575,7 +600,6 @@
         </section>
     </main>
 
-    <!-- FOOTER SYSTEM -->
     <footer>
         <div class="container footer-bottom">
             <p>&copy; 2026 ETK Global. All Rights Reserved. Kursus IELTS Terbaik & Pelatihan Bahasa Inggris Bisnis Korporat Yogyakarta.</p>
