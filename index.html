@@ -75,22 +75,13 @@
             top: 0;
             z-index: 999; 
             box-shadow: 0 10px 35px rgba(0,0,0,0.6); 
-            
-            /* Background image ETK_Future.png ditempatkan penuh dari batas atas bar merah hingga bawah bar biru */
-            background-image: 
-                linear-gradient(to right, rgba(13, 148, 136, 0) 10%, rgba(13, 148, 136, 0.4) 30%, #0d9488 60%),
-                url('https://raw.githubusercontent.com/gyoutrain-lab/ETKGlobal/main/ETK_Future.png');
-            background-repeat: no-repeat;
-            background-position: left center;
-            background-size: auto 100%; /* Tinggi penuh membentang 0 batas atas ke bawah, lebar menyesuaikan proporsi */
         }
-        
         .header-problem-banner {
-            /* Menggunakan background semi-transparan agar gambar ETK_Future di latar belakang tetap tembus */
-            background-color: rgba(220, 38, 38, 0.85); 
+            background-color: #dc2626; 
             padding: 14px 0;
             text-align: center;
-            backdrop-filter: blur(2px);
+            position: relative;
+            z-index: 1;
         }
         .problem-banner-text {
             color: #ffffff;
@@ -104,17 +95,19 @@
         }
 
         .header-main-bar {
-            /* Menggunakan gradasi transparan ke solid untuk menyatu mulus dengan gambar di sebelah kiri */
-            background: linear-gradient(to right, rgba(13, 148, 136, 0.2) 0%, rgba(17, 94, 89, 0.9) 40%, #115e59 100%);
+            background: linear-gradient(135deg, #0d9488 0%, #115e59 100%); 
             border-bottom: 2px solid #14b8a6;
             padding: 25px 0; 
-            backdrop-filter: blur(2px);
+            position: relative;
+            z-index: 1;
         }
         .header-flex {
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
+        
+        /* WRAPPER KONTEN LOGO & BACKGROUND */
         .logo-solution-wrapper {
             display: flex;
             align-items: center;
@@ -122,13 +115,38 @@
             position: relative;
             min-width: 420px; 
         }
+
+        /* ELEMEN BACKGROUND KHUSUS: Di depan warna bar, membentang penuh 0 atas & bawah, di belakang logo */
+        .logo-bg-future {
+            position: fixed;
+            top: 0;
+            left: 0;
+            /* Mengukur tinggi total header dari bar merah hingga batas bawah bar biru secara dinamis */
+            height: calc(20px + 28px + 2px + 130px - 40px); 
+            height: 100%;
+            position: absolute;
+            top: -53px; /* Menarik ke atas menyentuh 0 margin atas bar merah */
+            height: 200px; /* Menyesuaikan tinggi total keseluruhan bar */
+            width: 400px; /* Batas lebar background */
+            pointer-events: none;
+            z-index: 1;
+            
+            background-image: 
+                linear-gradient(to right, rgba(13, 148, 136, 0) 40%, rgba(13, 148, 136, 0.8) 75%, #0d9488 95%),
+                linear-gradient(to bottom, rgba(220, 38, 38, 0) 20%, rgba(13, 148, 136, 0) 30%),
+                url('https://raw.githubusercontent.com/gyoutrain-lab/ETKGlobal/main/ETK_Future.png');
+            background-repeat: no-repeat;
+            background-position: left center;
+            background-size: auto 100%;
+        }
+
         .logo img {
             height: 130px; 
             width: auto;
             position: absolute;
             top: -65px; 
             left: 0;
-            z-index: 2;
+            z-index: 2; /* Menjamin logo utama berada di paling depan */
         }
         .solution-callout {
             display: flex;
@@ -150,7 +168,7 @@
             color: #facc15; 
             font-size: 15px;
             font-weight: 800;
-            text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
         }
         .solution-text span {
             font-weight: 400;
@@ -208,7 +226,7 @@
                 inset 0 1px 4px rgba(0, 0, 0, 0.6);
         }
 
-        /* CONTENT CONTAINER (DIPAKAI UNTUK HALAMAN BARU ANDA) */
+        /* CONTENT CONTAINER (DIPAKAI UNTUK HALAMAN ASLI ANDA TANPA PERUBAHAN LAYOUT) */
         .main-content {
             padding: 60px 0;
             min-height: 60vh;
@@ -216,7 +234,7 @@
 
         /* RESPONSIVE DESIGN */
         @media (max-width: 992px) {
-            header { background-size: cover; background-position: center; }
+            .logo-bg-future { display: none; } /* Menyembunyikan background khusus di mobile agar layout tetap rapi */
             .logo img { position: static; height: 100px; margin: 0 auto; }
             .solution-callout { margin-left: 0; align-items: center; text-align: center; }
             .logo-solution-wrapper { min-width: auto; flex-direction: column; gap: 10px; }
@@ -229,6 +247,9 @@
 <body>
 
     <header>
+        <!-- BACKGROUND DENGAN GRADASI BERADA DI SINI, DI DEPAN WARNA BAR, NAMUN DI BELAKANG LOGO -->
+        <div class="logo-bg-future"></div>
+
         <div class="header-problem-banner">
             <div class="container">
                 <div class="problem-banner-text">
@@ -263,9 +284,10 @@
         </div>
     </header>
 
+    <!-- KONTEN TETAP TAMPIL BIASA SEBAGAIMANA ASLINYA, TIDAK ADA PERUBAHAN LAYOUT -->
     <main class="main-content">
         <div class="container">
-            <!-- Tulis konten halaman baru Anda di sini -->
+            <!-- Seluruh modul konten asli Anda tetap berada di sini tanpa ada perubahan -->
         </div>
     </main>
 
