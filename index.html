@@ -151,12 +151,12 @@
             display: flex;
             gap: 14px;
             flex-wrap: wrap;
-            padding-right: 0; /* Dikembalikan normal agar tidak terdesak */
+            padding-right: 0; 
             min-height: 50px;
             align-items: center;
             position: relative;
             width: 100%;
-            justify-content: flex-end; /* Menu berjejer rapi di sisi kanan */
+            justify-content: flex-end; 
         }
         
         nav a {
@@ -166,23 +166,19 @@
             font-size: 15px; 
             padding: 12px 20px;
             border-radius: 8px;
-            
-            /* Background Gradasi 3D */
             background: linear-gradient(180deg, #253a66 0%, #121f3d 100%);
             border-top: 1px solid #3d5a99;
             border-left: 1px solid #253a66;
             border-right: 1px solid #253a66;
-
             box-shadow: 
                 0 4px 0px #0a1224, 
                 0 6px 15px rgba(0, 0, 0, 0.5),
                 inset 0 1px 2px rgba(255, 255, 255, 0.15);
-                
             text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.7);
             transition: all 0.15s cubic-bezier(0.2, 0.8, 0.2, 1);
             position: relative;
             top: 0;
-            z-index: 5; /* Di atas backdrop agar aman di-klik */
+            z-index: 5; 
         }
         
         nav a:hover { 
@@ -206,12 +202,12 @@
         /* BACKDROP LOGO RAKSASA MENTOK KIRI DI BELAKANG LOGO UTAMA */
         .nav-future-giant-wrapper {
             position: absolute;
-            left: -4%; /* Sedikit keluar batas container untuk efek mentok full margin kiri */
-            top: -25px; /* Selaras sempurna dari margin atas */
-            height: 240px; /* Diperbesar masif hingga menjuntai ke batas bawah */
+            left: -12%; /* Geser ke kiri 3 posisi/langkah melewati margin luar */
+            top: -50px; /* Naik ke atas setengah posisi dari koordinat sebelumnya */
+            height: 240px; 
             width: auto;
-            pointer-events: none; /* Klik user otomatis menembus gambar ini */
-            z-index: 1; /* Berada di belakang navigasi menu */
+            pointer-events: none; 
+            z-index: 1; 
             display: flex;
             align-items: center;
         }
@@ -221,9 +217,9 @@
             width: auto;
             object-fit: contain;
             /* REVERSE GRADIENT: Kiri tajam/jelas, memudar halus transparan ke kanan arah menu */
-            -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 90%);
-            mask-image: linear-gradient(to right, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 90%);
-            opacity: 0.85; /* Melebur estetik dengan tema warna navbar */
+            -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,1) 40%, rgba(0,0,0,0) 95%);
+            mask-image: linear-gradient(to right, rgba(0,0,0,1) 40%, rgba(0,0,0,0) 95%);
+            opacity: 0.85; 
         }
 
         /* HERO LAYOUT */
@@ -388,7 +384,7 @@
             .logo-solution-wrapper { min-width: auto; flex-direction: column; gap: 10px; }
             .header-flex { flex-direction: column; gap: 20px; }
             nav { justify-content: center; gap: 10px; padding-right: 0; }
-            .nav-future-giant-wrapper { display: none; } /* Menyembunyikan dekorasi raksasa pada mobile agar bersih */
+            .nav-future-giant-wrapper { display: none; }
             nav a { padding: 10px 14px; font-size: 14px; }
             .hero-grid { grid-template-columns: 1fr; text-align: center; }
             .dashboard-vertical-layout { grid-template-columns: 1fr; }
@@ -431,7 +427,7 @@
                     <a href="#corporate-executive-syllabus">Silabus Korporat</a>
                     <a href="#dokumentasi">Dokumentasi</a>
                     
-                    <!-- LAYER LOGO RAKSASA MENTOK KIRI DI BELAKANG LOGO UTAMA -->
+                    <!-- LAYER LOGO RAKSASA MENTOK KIRI DI BELAKANG LOGO UTAMA (DIGESER & DINAIKKAN) -->
                     <div class="nav-future-giant-wrapper">
                         <img src="https://raw.githubusercontent.com/gyoutrain-lab/ETKGlobal/main/ETK_Future.png" alt="ETK Future Giant Backdrop">
                     </div>
