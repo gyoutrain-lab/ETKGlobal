@@ -48,7 +48,7 @@
     }
     </script>
 
-    <!-- IMPORT FONT INTER (STANDAR EMAS TIPOGRAFI WEB MODERN) -->
+    <!-- IMPORT FONT INTER -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -64,13 +64,12 @@
             scroll-behavior: smooth;
         }
         
-        /* BODY TEXT: Ukuran & Spasi Keterbacaan Internasional */
         body {
             background-color: #0b1329; 
-            color: #94a3b8; /* Slate gray lembut untuk kenyamanan mata */
+            color: #94a3b8; 
             font-size: 16px;
-            font-weight: 400; /* Regular untuk kontas optimal */
-            line-height: 1.65; /* Jarak spasi baris paling ideal untuk body text */
+            font-weight: 400; 
+            line-height: 1.65; 
             letter-spacing: -0.011em;
         }
         
@@ -81,15 +80,17 @@
             position: relative;
         }
 
-        /* NAVIGATION BAR SYSTEM */
+        /* NAVIGATION BAR SYSTEM WITH SYNCHRONIZED LIGHTING DIRECTIONS */
         header {
             position: sticky;
             top: 0;
             z-index: 999; 
             box-shadow: 0 10px 35px rgba(0,0,0,0.6); 
         }
+        
+        /* BANNER MERAH: Gradasi dari kiri (terang) ke kanan (gelap) */
         .header-problem-banner {
-            background-color: #dc2626; 
+            background: linear-gradient(to right, #ef4444 0%, #b91c1c 70%, #991b1b 100%); 
             padding: 12px 0;
             text-align: center;
         }
@@ -104,8 +105,9 @@
             font-weight: 800;
         }
 
+        /* BAR UTAMA: Gradasi dari kiri (Teal Terang) ke kanan (Teal Gelap/Midnight) */
         .header-main-bar {
-            background: linear-gradient(135deg, #0f766e 0%, #115e59 100%); 
+            background: linear-gradient(to right, #14b8a6 0%, #0f766e 40%, #115e59 75%, #0f172a 100%); 
             border-bottom: 2px solid #14b8a6;
             padding: 20px 0; 
             position: relative;
@@ -214,7 +216,7 @@
             object-position: left center;
             -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,1) 40%, rgba(0,0,0,0) 95%);
             mask-image: linear-gradient(to right, rgba(0,0,0,1) 40%, rgba(0,0,0,0) 95%);
-            opacity: 0.85; 
+            opacity: 0.9; /* Sedikit dinaikkan agar menyatu dengan gradasi terang bar */
         }
 
         /* HERO LAYOUT */
@@ -229,13 +231,12 @@
             align-items: center;
         }
         
-        /* H1 TITLE: Ketebalan Akurat & Spasi Rapat Berwibawa */
         .hero-text-side h1 {
             font-size: 40px;
             color: #ffffff;
-            font-weight: 800; /* Extra Bold untuk Otoritas Utama */
-            line-height: 1.25; /* Judul wajib lebih rapat spasi barisnya */
-            letter-spacing: -0.025em; /* Optically tightened untuk font besar */
+            font-weight: 800; 
+            line-height: 1.25; 
+            letter-spacing: -0.025em; 
             margin-bottom: 20px;
         }
         .problem-hook-badge {
@@ -278,12 +279,11 @@
             box-shadow: 0 8px 20px rgba(13, 148, 136, 0.3);
         }
         
-        /* TITLES GENERIK UNTUK SECTION (H2 & H3) */
         .section-title { 
             text-align: center; 
             font-size: 32px; 
             color: #ffffff; 
-            font-weight: 700; /* Bold */
+            font-weight: 700; 
             line-height: 1.3;
             letter-spacing: -0.02em;
             margin-bottom: 10px; 
@@ -375,24 +375,13 @@
         .time-tag { color: #14b8a6; font-weight: 800; font-size: 18px; text-transform: uppercase; letter-spacing: 0.05em; }
         .timeline-detail h3 { color: #ffffff; font-size: 20px; font-weight: 700; margin-bottom: 10px; }
 
-        /* DOKUMENTASI BARU (GRID 3 KOLOM EXCELLENT) */
+        /* DOKUMENTASI BARU */
         .media-gallery { padding: 90px 0; background-color: #0b1329; border-top: 1px solid #1e293b; }
         .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
         .gallery-item { background-color: #111c33; border-radius: 12px; overflow: hidden; border: 1px solid #1e293b; display: flex; flex-direction: column; transition: all 0.3s ease; }
         .gallery-item:hover { border-color: #14b8a6; transform: translateY(-4px); box-shadow: 0 12px 24px rgba(0,0,0,0.3); }
         .gallery-item img { width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; background-color: #0b1329; display: block; }
-        
-        /* CAPTION JELAS & PROFESIONAL: Menggunakan Inter 500, line-height seimbang */
-        .gallery-caption { 
-            padding: 22px; 
-            font-size: 14px; 
-            color: #cbd5e1; /* Terang namun tidak silau */
-            text-align: center; 
-            margin-top: auto; 
-            border-top: 1px solid #1e293b; 
-            font-weight: 500; 
-            line-height: 1.5;
-        }
+        .gallery-caption { padding: 22px; font-size: 14px; color: #cbd5e1; text-align: center; margin-top: auto; border-top: 1px solid #1e293b; font-weight: 500; line-height: 1.5; }
 
         /* FOOTER SYSTEM */
         footer { background-color: #060b18; color: #475569; padding: 60px 0 35px 0; font-size: 14px; border-top: 1px solid #1e293b; }
@@ -417,7 +406,7 @@
 <body>
 
     <header>
-        <!-- RED PROBLEM BANNER -->
+        <!-- RED PROBLEM BANNER (GRADIENT LEFT TO RIGHT) -->
         <div class="header-problem-banner">
             <div class="container">
                 <div class="problem-banner-text">
@@ -426,10 +415,10 @@
             </div>
         </div>
         
-        <!-- MAIN NAVIGATION BAR -->
+        <!-- MAIN NAVIGATION BAR (GRADIENT LEFT TO RIGHT SYNCHRONIZED WITH BACKDROP) -->
         <div class="header-main-bar">
             
-            <!-- IMAGE LAYER SEPARASI AREA KIRI -->
+            <!-- IMAGE LAYER BACKDROP (FADES FROM LEFT TO RIGHT) -->
             <div class="header-bg-backdrop-layer">
                 <img src="https://raw.githubusercontent.com/gyoutrain-lab/ETKGlobal/main/ETK_Future.png" alt="ETK Future Giant Background">
             </div>
@@ -557,7 +546,7 @@
             </div>
         </section>
 
-        <!-- GALERI DOKUMENTASI TERBARU (3 KOLOM PROFESIONAL) -->
+        <!-- GALERI DOKUMENTASI BARU -->
         <section class="media-gallery" id="dokumentasi">
             <div class="container">
                 <div class="section-title">Dokumentasi Ekosistem & Aktivitas ETK Global</div>
