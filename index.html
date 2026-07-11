@@ -69,7 +69,7 @@
             margin: 0 auto;
         }
 
-        /* NAVIGATION BAR */
+        /* NAVIGATION BAR ARCHITECTURE */
         header {
             position: sticky;
             top: 0;
@@ -81,7 +81,7 @@
             padding: 14px 0;
             text-align: center;
             position: relative;
-            z-index: 1;
+            z-index: 2;
         }
         .problem-banner-text {
             color: #ffffff;
@@ -99,7 +99,7 @@
             border-bottom: 2px solid #14b8a6;
             padding: 25px 0; 
             position: relative;
-            z-index: 1;
+            z-index: 2;
         }
         .header-flex {
             display: flex;
@@ -107,7 +107,7 @@
             align-items: center;
         }
         
-        /* WRAPPER KONTEN LOGO & BACKGROUND */
+        /* LOGO WRAPPER DENGAN BACKGROUND ETK_FUTURE INTEGRATED */
         .logo-solution-wrapper {
             display: flex;
             align-items: center;
@@ -116,43 +116,44 @@
             min-width: 420px; 
         }
 
-        /* ELEMEN BACKGROUND KHUSUS: Di depan warna bar, membentang penuh 0 atas & bawah, di belakang logo */
-        .logo-bg-future {
-            position: fixed;
-            top: 0;
-            left: 0;
-            /* Mengukur tinggi total header dari bar merah hingga batas bawah bar biru secara dinamis */
-            height: calc(20px + 28px + 2px + 130px - 40px); 
-            height: 100%;
+        /* Suntikan Gambar ETK_Future: Berada di DEPAN warna bar dasar, membentang penuh 0 atas-bawah, di BEAKANG grafis logo */
+        .logo-solution-wrapper::before {
+            content: "";
             position: absolute;
-            top: -53px; /* Menarik ke atas menyentuh 0 margin atas bar merah */
-            height: 200px; /* Menyesuaikan tinggi total keseluruhan bar */
-            width: 400px; /* Batas lebar background */
+            /* Menarik elemen hingga mentok ke batas atas bar merah dan bawah bar biru */
+            top: -77px; 
+            left: -150px; 
+            height: 200px; 
+            width: 500px;
             pointer-events: none;
             z-index: 1;
             
+            /* Rendering Raw Image dengan gradasi halus menyatu ke arah kanan menuju toska (#0d9488) */
             background-image: 
-                linear-gradient(to right, rgba(13, 148, 136, 0) 40%, rgba(13, 148, 136, 0.8) 75%, #0d9488 95%),
-                linear-gradient(to bottom, rgba(220, 38, 38, 0) 20%, rgba(13, 148, 136, 0) 30%),
+                linear-gradient(to right, rgba(13, 148, 136, 0) 25%, rgba(13, 148, 136, 0.7) 65%, #0d9488 95%),
                 url('https://raw.githubusercontent.com/gyoutrain-lab/ETKGlobal/main/ETK_Future.png');
             background-repeat: no-repeat;
             background-position: left center;
             background-size: auto 100%;
         }
 
+        .logo {
+            position: relative;
+            z-index: 3; /* Logo utama berada di lapisan paling depan */
+        }
         .logo img {
             height: 130px; 
             width: auto;
             position: absolute;
             top: -65px; 
             left: 0;
-            z-index: 2; /* Menjamin logo utama berada di paling depan */
         }
         .solution-callout {
             display: flex;
             flex-direction: column;
             margin-left: 140px;
-            z-index: 2;
+            position: relative;
+            z-index: 3;
         }
         .solution-tag {
             font-size: 11px;
@@ -168,7 +169,7 @@
             color: #facc15; 
             font-size: 15px;
             font-weight: 800;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.9);
         }
         .solution-text span {
             font-weight: 400;
@@ -180,7 +181,8 @@
             display: flex;
             gap: 14px;
             flex-wrap: wrap;
-            z-index: 2;
+            position: relative;
+            z-index: 3;
         }
         nav a {
             text-decoration: none;
@@ -189,25 +191,20 @@
             font-size: 15px; 
             padding: 12px 20px;
             border-radius: 8px;
-            
             background: linear-gradient(180deg, #253a66 0%, #121f3d 100%);
-            
             border-top: 1px solid #3d5a99;
             border-left: 1px solid #253a66;
             border-right: 1px solid #253a66;
             border-bottom: none;
-
             box-shadow: 
                 0 4px 0px #0a1224, 
                 0 6px 15px rgba(0, 0, 0, 0.5),
                 inset 0 1px 2px rgba(255, 255, 255, 0.15);
-                
             text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.7);
             transition: all 0.15s cubic-bezier(0.2, 0.8, 0.2, 1);
             position: relative;
             top: 0;
         }
-        
         nav a:hover { 
             color: #ffffff;
             background: linear-gradient(180deg, #2d477c 0%, #17284e 100%);
@@ -217,7 +214,6 @@
                 inset 0 1px 2px rgba(255, 255, 255, 0.25);
             top: -2px;
         }
-
         nav a:active {
             top: 3px;
             box-shadow: 
@@ -226,15 +222,15 @@
                 inset 0 1px 4px rgba(0, 0, 0, 0.6);
         }
 
-        /* CONTENT CONTAINER (DIPAKAI UNTUK HALAMAN ASLI ANDA TANPA PERUBAHAN LAYOUT) */
+        /* MAIN CONTENT SECTION */
         .main-content {
-            padding: 60px 0;
+            padding: 40px 0;
             min-height: 60vh;
         }
 
-        /* RESPONSIVE DESIGN */
+        /* RESPONSIVE HANDLING */
         @media (max-width: 992px) {
-            .logo-bg-future { display: none; } /* Menyembunyikan background khusus di mobile agar layout tetap rapi */
+            .logo-solution-wrapper::before { display: none; }
             .logo img { position: static; height: 100px; margin: 0 auto; }
             .solution-callout { margin-left: 0; align-items: center; text-align: center; }
             .logo-solution-wrapper { min-width: auto; flex-direction: column; gap: 10px; }
@@ -247,9 +243,6 @@
 <body>
 
     <header>
-        <!-- BACKGROUND DENGAN GRADASI BERADA DI SINI, DI DEPAN WARNA BAR, NAMUN DI BELAKANG LOGO -->
-        <div class="logo-bg-future"></div>
-
         <div class="header-problem-banner">
             <div class="container">
                 <div class="problem-banner-text">
@@ -272,7 +265,6 @@
                     </div>
                 </div>
 
-                <!-- NAVIGATION BAR DENGAN DESAIN 3D COLOURED GRADATED DARK BLUE -->
                 <nav>
                     <a href="#dashboard">Dashboard</a>
                     <a href="#methodology">Metodologi PPS</a>
@@ -284,10 +276,10 @@
         </div>
     </header>
 
-    <!-- KONTEN TETAP TAMPIL BIASA SEBAGAIMANA ASLINYA, TIDAK ADA PERUBAHAN LAYOUT -->
+    <!-- SELURUH KONTEN UTAMA DAN MODUL ASLI ANDA TAMPIL BIASA DI SINI TANPA ADA PERUBAHAN -->
     <main class="main-content">
         <div class="container">
-            <!-- Seluruh modul konten asli Anda tetap berada di sini tanpa ada perubahan -->
+            <!-- Tempel/pertahankan seluruh deretan kode section, dashboard, tabel harga, dan modul asli Anda di area ini -->
         </div>
     </main>
 
