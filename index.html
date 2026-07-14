@@ -3,9 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kursus IELTS Band 9 & English Korporat - ETK Global</title>
-    <meta name="description" content="Kursus IELTS terbaik di Yogyakarta & pelatihan English korporat. Hubungi ETK Global Yogyakarta untuk akselerasi Band 9 dengan metode PPS eksekutif serta silabus lengkap kelas korporat.">
     
+    <!-- GOOGLE SEARCH CONSOLE INTEGRATION VERIFICATION -->
+    <meta name="google-site-verification" content="MASUKKAN_KODE_VERIFIKASI_GOOGLE_DI_SINI" />
+
+    <!-- FAVICON INTEGRATION LINKS -->
+    <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <link rel="manifest" href="site.webmanifest" />
+
+    <!-- SEO META ARCHITECTURE -->
+    <title>Kursus IELTS Band 9 Yogyakarta & English Korporat - ETK Global</title>
+    <meta name="description" content="Kursus IELTS terbaik di Yogyakarta & pelatihan English korporat. Hubungi ETK Global Yogyakarta untuk akselerasi Band 9 dengan metode PPS eksekutif serta silabus lengkap kelas korporat, Prometric, dan komunikasi bisnis.">
+    <meta name="keywords" content="kursus ielts yogyakarta, ielts band 9 jogja, english for job interview jogja, pelatihan bahasa inggris korporat yogyakarta, silabus english corporate, prometric nurse jogja">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0b1329">
+    
+    <link rel="canonical" href="https://gyoutrain-lab.github.io/ETKGlobal/">
+
+    <!-- OPEN GRAPH SOCIAL METADATA -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://gyoutrain-lab.github.io/ETKGlobal/">
+    <meta property="og:title" content="Kursus IELTS Band 9 Yogyakarta & English Korporat | ETK Global">
+    <meta property="og:description" content="Lembaga pelatihan bahasa Inggris korporat dengan pendekatan PPS, akselerasi IELTS Band 9, dan transformasi karir global di Yogyakarta.">
+    <meta property="og:image" content="https://raw.githubusercontent.com/gasfarrasyid/etk_bisa/main/header_cr.jpg">
+
+    <!-- JSON-LD STRUCTURED SCHEMA MARKUP -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "EducationalOrganization",
+      "name": "ETK Global Yogyakarta",
+      "description": "Pusat akselerasi komunikasi bisnis, kursus persiapan IELTS Band 9, dan pelatihan Prometric Nursing Test di Yogyakarta.",
+      "url": "https://gyoutrain-lab.github.io/ETKGlobal/",
+      "logo": "https://raw.githubusercontent.com/gasfarrasyid/etk_bisa/main/logo_etk_cr.png",
+      "telephone": "+62-819-0168-5253",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Panjen Tajem, Maguwoharjo, Depok",
+        "addressLocality": "Sleman",
+        "addressRegion": "Daerah Istimewa Yogyakarta",
+        "postalCode": "55281",
+        "addressCountry": "ID"
+      }
+    }
+    </script>
+
+    <!-- MASTER USER INTERFACE STYLESHEET (CSS INTEGRATION) -->
     <style>
         /* --- BRAND THEME & RESET --- */
         * {
@@ -13,6 +59,9 @@
             padding: 0;
             box-sizing: border-box;
             font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+        html {
+            scroll-behavior: smooth;
         }
         body {
             background-color: #0b1329; 
@@ -26,7 +75,7 @@
             position: relative;
         }
 
-        /* --- GLOBAL & MAIN NAVIGATION ARCHITECTURE --- */
+        /* --- MAIN DOMAIN NAVIGATION & HEADER ARCHITECTURE --- */
         header {
             position: sticky;
             top: 0;
@@ -53,6 +102,7 @@
             border-bottom: 2px solid #14b8a6;
             padding: 25px 0; 
             position: relative;
+            overflow: visible; 
         }
         .header-flex {
             display: flex;
@@ -63,7 +113,9 @@
             display: flex;
             align-items: center;
             gap: 20px;
+            position: relative;
             min-width: 380px; 
+            z-index: 10; 
         }
         .logo img {
             height: 90px; 
@@ -94,12 +146,19 @@
             font-size: 14px;
             font-weight: 800;
         }
+        .solution-text span {
+            font-weight: 400;
+            color: #e2fbf7;
+        }
         
-        /* --- MAIN DOMAIN NAV BUTTONS --- */
+        /* --- MAIN DOMAIN NAVBAR --- */
         nav {
             display: flex;
             gap: 10px;
             flex-wrap: wrap;
+            min-height: 40px;
+            align-items: center;
+            justify-content: flex-end; 
         }
         nav a, nav button {
             text-decoration: none;
@@ -110,27 +169,75 @@
             border-radius: 8px;
             background: linear-gradient(180deg, #253a66 0%, #121f3d 100%);
             border-top: 1px solid #3d5a99;
-            box-shadow: 0 4px 0px #0a1224, 0 6px 15px rgba(0, 0, 0, 0.5);
+            border-left: 1px solid #253a66;
+            border-right: 1px solid #253a66;
+            box-shadow: 0 4px 0px #0a1224, 0 6px 15px rgba(0, 0, 0, 0.5), inset 0 1px 2px rgba(255, 255, 255, 0.15);
+            text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.7);
+            transition: all 0.15s cubic-bezier(0.2, 0.8, 0.2, 1);
+            position: relative;
+            z-index: 20; 
             cursor: pointer;
             border-bottom: none;
-            transition: all 0.15s ease;
         }
         nav a:hover, nav button:hover { 
             color: #ffffff;
             background: linear-gradient(180deg, #2d477c 0%, #17284e 100%);
+            box-shadow: 0 5px 0px #0a1224, 0 8px 20px rgba(0, 0, 0, 0.6), inset 0 1px 2px rgba(255, 255, 255, 0.25);
             top: -2px; 
         }
-        nav button.ielts-trigger-btn {
+        nav a:active, nav button:active {
+            top: 3px; 
+            box-shadow: 0 1px 0px #0a1224, 0 2px 5px rgba(0, 0, 0, 0.4), inset 0 1px 4px rgba(0, 0, 0, 0.6);
+        }
+        nav button.portfolio-trigger-btn {
             background: linear-gradient(180deg, #b91c1c 0%, #7f1d1d 100%);
             border-top: 1px solid #ef4444;
+            border-left: 1px solid #b91c1c;
+            border-right: 1px solid #b91c1c;
+        }
+        nav button.portfolio-trigger-btn:hover {
+            background: linear-gradient(180deg, #dc2626 0%, #991b1b 100%);
+        }
+        nav button.ielts-route-btn {
+            background: linear-gradient(180deg, #ca8a04 0%, #854d0e 100%);
+            border-top: 1px solid #facc15;
+            border-left: 1px solid #ca8a04;
+            border-right: 1px solid #ca8a04;
+        }
+        nav button.ielts-route-btn:hover {
+            background: linear-gradient(180deg, #eab308 0%, #a16207 100%);
         }
 
-        /* --- SUB-DOMAIN NAVIGATION MODULE (TERISOLASI) --- */
+        /* COMPLIANCE BOUNDARY BACKDROP LAYER */
+        .header-bg-backdrop-layer {
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 450px;
+            pointer-events: none;
+            z-index: 1;
+            overflow: hidden;
+        }
+        .header-bg-backdrop-layer img {
+            height: 100%;
+            width: auto;
+            object-fit: cover;
+            object-position: left center;
+            mask-image: linear-gradient(to right, rgba(0,0,0,1) 40%, rgba(0,0,0,0) 95%);
+            opacity: 0.85; 
+        }
+
+        /* --- ISOLATED SUB-DOMAIN NAVIGATION MODULE ("IELTS PREPARATION") --- */
         .sub-domain-nav {
             background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
             border-bottom: 3px solid #14b8a6;
             padding: 15px 0;
-            display: none; /* Default tersembunyi, aktif hanya di area IELTS */
+            display: none; /* Hanya muncul di area khusus IELTS */
+            position: sticky;
+            top: 0;
+            z-index: 999;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
         }
         .sub-nav-container {
             display: flex;
@@ -149,6 +256,7 @@
         .sub-nav-menu {
             display: flex;
             gap: 10px;
+            flex-wrap: wrap;
         }
         .sub-nav-btn {
             background: #111c33;
@@ -159,22 +267,28 @@
             cursor: pointer;
             font-weight: 600;
             font-size: 13px;
+            transition: all 0.2s ease;
         }
-        .sub-nav-btn.active, .sub-nav-btn:hover {
+        .sub-nav-btn:hover, .sub-nav-btn.active {
             background: #14b8a6;
             color: #ffffff;
+            border-color: #14b8a6;
         }
         .sub-nav-btn.wa-btn {
             background: #25d366;
             color: #ffffff;
             border-color: #25d366;
         }
-
-        /* --- WORKSPACE VIEWPORT LAYER SYSTEM --- */
-        .view-layer {
-            display: none;
+        .sub-nav-btn.wa-btn:hover {
+            background: #128c7e;
         }
-        .view-layer.active-layer {
+
+        /* --- SPA VIRTUAL PAGE MANAGEMENT --- */
+        .virtual-page {
+            display: none;
+            padding: 40px 0;
+        }
+        .virtual-page.active-page {
             display: block;
         }
 
@@ -194,6 +308,29 @@
             color: #ffffff;
             font-weight: 800;
             margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        .problem-hook-badge {
+            display: inline-block;
+            background-color: #dc2626;
+            color: #ffffff;
+            font-weight: 800;
+            font-size: 13px;
+            padding: 4px 12px;
+            border-radius: 4px;
+            margin-bottom: 15px;
+        }
+        .hero-text-side p {
+            font-size: 16px;
+            color: #94a3b8;
+            margin-bottom: 30px;
+        }
+        .hero-banner-img {
+            width: 100%;
+            height: auto;
+            border-radius: 16px;
+            border: 1px solid #14b8a6;
+            box-shadow: 0 20px 45px rgba(0,0,0,0.5);
         }
         .btn-cta {
             display: inline-block;
@@ -204,15 +341,69 @@
             border-radius: 8px;
             font-weight: 700;
             cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            text-align: center;
+            border: none;
+        }
+        .btn-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(13, 148, 136, 0.4);
         }
 
-        /* --- SYSTEM SIMULATOR WORKSPACE (IELTS SUB-DOMAIN) --- */
+        /* --- DASHBOARD VERTICAL ARCHITECTURE --- */
+        .dashboard-section { padding: 60px 0; background-color: #0b1329; }
+        .section-title { text-align: center; font-size: 34px; color: #ffffff; font-weight: 700; margin-bottom: 12px; }
+        .section-subtitle { text-align: center; color: #94a3b8; margin-bottom: 50px; }
+        .dashboard-vertical-layout { display: grid; grid-template-columns: 280px 1fr; gap: 40px; }
+        .dashboard-tabs-vertical { display: flex; flex-direction: column; gap: 12px; }
+        
+        .tab-btn {
+            background-color: #111c33; color: #94a3b8; border: 1px solid #1e293b;
+            padding: 16px 20px; border-radius: 10px; font-weight: 600; cursor: pointer; text-align: left;
+            transition: all 0.3s ease;
+        }
+        .tab-btn.active, .tab-btn:hover { background: #0d9488; color: #ffffff; border-color: #14b8a6; }
+        
+        .dashboard-content-panel {
+            background-color: #111c33; border: 1px solid #1e293b;
+            border-radius: 18px; padding: 40px; min-height: 350px;
+        }
+        .tab-panel { display: none; }
+        .tab-panel.active { display: block; }
+
+        .sub-program-downward-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .sub-card {
+            background-color: #0b1329;
+            border: 1px solid #1e293b;
+            border-left: 4px solid #14b8a6;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .sub-card-title {
+            display: block;
+            font-size: 18px;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 8px;
+        }
+
+        /* --- IELTS SUB-DOMAIN INTERACTION WORKSPACE --- */
         .ielts-workstation {
             background: #111c33;
             border: 1px solid #1e293b;
             border-radius: 12px;
             padding: 25px;
             margin-top: 20px;
+        }
+        .level-selector-row {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
         }
         .iframe-container {
             position: relative;
@@ -228,7 +419,7 @@
             top: 0; left: 0; width: 100%; height: 100%; border: none;
         }
 
-        /* --- FORM REGISTRATION SYSTEM --- */
+        /* --- SUB-DOMAIN REGISTRATION FORM --- */
         .form-card {
             background: #111c33;
             border: 1px solid #1e293b;
@@ -240,167 +431,437 @@
         .form-group { margin-bottom: 20px; }
         .form-group label { display: block; color: #ffffff; font-weight: 600; margin-bottom: 8px; font-size: 14px; }
         .form-control { width: 100%; padding: 12px; background: #0b1329; border: 1px solid #2e3d59; color: #ffffff; border-radius: 6px; }
+        .form-control:focus { outline: none; border-color: #14b8a6; }
         .radio-grid { display: flex; gap: 20px; margin-top: 5px; }
         .radio-option { display: flex; align-items: center; gap: 8px; cursor: pointer; }
-
-        /* --- SECTION GENERIC STYLES --- */
-        .dashboard-section, .methodology-section, .corporate-syllabus-wrapper, .media-gallery { padding: 60px 0; border-bottom: 1px solid #1e293b; }
-        .section-title { text-align: center; font-size: 34px; color: #ffffff; font-weight: 700; margin-bottom: 40px; }
         .review-box { background: #111c33; border-left: 4px solid #facc15; padding: 20px; border-radius: 8px; margin-bottom: 15px; }
+        .review-box h4 { color: #ffffff; margin-bottom: 5px; }
 
-        /* RESPONSIVE BREAKPOINT */
+        /* --- METODOLOGI PPS SECTION --- */
+        .methodology-section { padding: 90px 0; background-color: #0b1329; border-top: 1px solid #1e293b; }
+        .methodology-card { background-color: #111c33; border: 1px solid #14b8a6; padding: 40px; border-radius: 16px; margin-top: 30px; }
+        .methodology-card h3 { color: #ffffff; font-size: 24px; margin-bottom: 15px; }
+
+        /* --- PACKAGES GRID --- */
+        .grid-section { padding: 90px 0; background-color: #0b1329; }
+        .program-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .program-card { background-color: #111c33; padding: 45px 35px; border-radius: 16px; border: 1px solid #1e293b; display: flex; flex-direction: column; justify-content: space-between; }
+        .program-card h2 { font-size: 23px; color: #ffffff; margin-bottom: 15px; }
+        .program-card .price { font-size: 24px; color: #14b8a6; font-weight: 800; margin-bottom: 20px; }
+        .program-card p { margin-bottom: 25px; }
+
+        /* --- SILABUS KORPORAT SYSTEM ARCHITECTURE --- */
+        .corporate-syllabus-wrapper {
+            background-color: #0b1329;
+            padding: 90px 0;
+            border-top: 2px solid #1e293b;
+        }
+        .class-badge {
+            display: inline-block;
+            background-color: #ef4444;
+            color: #ffffff;
+            font-weight: 900;
+            font-size: 12px;
+            text-transform: uppercase;
+            padding: 5px 16px;
+            border-radius: 50px;
+            margin-bottom: 25px;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3);
+        }
+        .section-title-premium {
+            font-size: 32px;
+            color: #ffffff;
+            font-weight: 700;
+            margin-bottom: 40px;
+            border-left: 5px solid #14b8a6;
+            padding-left: 18px;
+        }
+        .timeline-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            margin-bottom: 60px;
+        }
+        .timeline-card {
+            background-color: #111c33;
+            border: 1px solid #1e293b;
+            border-radius: 12px;
+            padding: 35px;
+            display: grid;
+            grid-template-columns: 180px 1fr;
+            gap: 25px;
+            transition: all 0.3s ease;
+        }
+        .time-tag { color: #14b8a6; font-weight: 800; font-size: 20px; text-transform: uppercase; }
+        .timeline-detail h3 { color: #ffffff; font-size: 22px; margin-bottom: 12px; }
+        .timeline-detail ul { margin-left: 20px; color: #94a3b8; margin-top: 10px; }
+        .timeline-detail ul li { margin-bottom: 6px; }
+
+        /* --- MEDIA & DOCUMENTATION GALLERY --- */
+        .media-gallery { padding: 90px 0; background-color: #0b1329; }
+        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
+        .gallery-item { background-color: #111c33; border-radius: 14px; overflow: hidden; border: 1px solid #1e293b; display: flex; flex-direction: column; }
+        .gallery-item img { width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; background-color: #0b1329; display: block; }
+        .gallery-caption { padding: 22px; font-size: 14.5px; color: #94a3b8; text-align: center; margin-top: auto; border-top: 1px solid #1e293b; }
+
+        /* --- INTEGRATED CASE STUDY (PORTFOLIO) STYLING --- */
+        .portfolio-section {
+            padding: 80px 0;
+            background: linear-gradient(180deg, #0b1329 0%, #060b18 100%);
+        }
+        .portfolio-box {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: #111c33;
+            border: 1px solid #14b8a6;
+            padding: 50px;
+            border-radius: 16px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+        }
+        .portfolio-box h2 { color: #14b8a6; margin-top: 35px; font-size: 22px; border-bottom: 1px solid #1e293b; padding-bottom: 8px; }
+        .portfolio-box ul { margin-left: 22px; margin-top: 12px; }
+        .portfolio-box li { margin-bottom: 10px; color: #94a3b8; }
+        .portfolio-intro { color: #e2fbf7; font-size: 16px; margin-top: 15px; line-height: 1.8; }
+        
+        /* FOOTER BRANDING ARCHITECTURE */
+        footer { background-color: #060b18; color: #64748b; padding: 70px 0 35px 0; font-size: 14px; border-top: 1px solid #1e293b; }
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-bottom: 40px; }
+        .footer-info h4 { color: #ffffff; margin-bottom: 20px; font-size: 18px; }
+        .footer-links a { display: block; color: #94a3b8; text-decoration: none; margin-bottom: 10px; }
+        .footer-links a:hover { color: #14b8a6; }
+        .footer-bottom { text-align: center; padding-top: 35px; margin-top: 40px; border-top: 1px solid #1e293b; }
+
+        /* ADVANCED BREAKPOINT RESPONSIVENESS */
         @media (max-width: 992px) {
-            .logo img { position: static; height: 80px; margin: 0 auto; }
-            .logo-solution-wrapper { min-width: auto; flex-direction: column; }
-            .header-flex, .sub-nav-container { flex-direction: column; text-align: center; }
+            .logo img { position: static; height: 100px; margin: 0 auto; }
+            .solution-callout { margin-left: 0; align-items: center; text-align: center; }
+            .logo-solution-wrapper { min-width: auto; flex-direction: column; gap: 10px; }
+            .header-flex, .sub-nav-container { flex-direction: column; gap: 20px; text-align: center; }
+            nav, .sub-nav-menu { justify-content: center; gap: 10px; }
+            .header-bg-backdrop-layer { display: none; }
             .hero-grid { grid-template-columns: 1fr; text-align: center; }
-            .sub-nav-menu { flex-wrap: wrap; justify-content: center; }
+            .dashboard-vertical-layout { grid-template-columns: 1fr; }
+            .timeline-card { grid-template-columns: 1fr; gap: 10px; padding: 25px; }
+            .portfolio-box { padding: 25px; }
         }
     </style>
 </head>
 <body>
 
     <!-- ============================================== -->
-    <!-- MASTER GLOBAL HEADER (MAIN DOMAIN LAYER)       -->
+    <!-- MASTER NAVIGATION HEADER (MAIN DOMAIN ENGINE)  -->
     <!-- ============================================== -->
-    <header id="main-domain-header">
+    <header id="main-domain-navigation-bar">
+        <!-- TOP ALERT NOTIFICATION HUB -->
         <div class="header-problem-banner">
-            <div class="container"><div class="problem-banner-text">Stuck in Local Salary due to English Blocks? Unlock Global Career Now!</div></div>
+            <div class="container">
+                <div class="problem-banner-text">
+                    Stuck in Local Salary due to English Blocks? Unlock your <span class="gold-trigger">International Career</span> Now!
+                </div>
+            </div>
         </div>
+        
+        <!-- TEAL INTEGRATED NAVIGATION BAR -->
         <div class="header-main-bar">
+            <!-- BACKGROUND IMAGE LAYER -->
+            <div class="header-bg-backdrop-layer">
+                <img src="https://raw.githubusercontent.com/gasfarrasyid/etk_bisa/main/etk_future.png" alt="ETK Future Gradient Background">
+            </div>
+
             <div class="container header-flex">
                 <div class="logo-solution-wrapper">
-                    <div class="logo"><img src="https://raw.githubusercontent.com/gasfarrasyid/etk_bisa/main/logo_etk_cr.png" alt="Logo" onclick="routeToDomain('main')"></div>
+                    <div class="logo">
+                        <img src="https://raw.githubusercontent.com/gasfarrasyid/etk_bisa/main/logo_etk_cr.png" alt="ETK Global" onclick="routeDomain('main-domain')">
+                    </div>
                     <div class="solution-callout">
                         <span class="solution-tag">The Absolute Solution</span>
-                        <div class="solution-text">Akurat, Tepat & Modern <span>untuk Karir Global</span></div>
+                        <div class="solution-text">Akurat, Tepat & Modern <span>untuk Akselerasi Karir Global</span></div>
                     </div>
                 </div>
-                <nav>
-                    <a href="#dashboard">Dashboard</a>
-                    <a href="#methodology">Metodologi PPS</a>
-                    <a href="#corporate-executive-syllabus">Silabus Korporat</a>
-                    <button class="ielts-trigger-btn" onclick="routeToDomain('ielts-subdomain')">🎯 IELTS Preparation Portal</button>
+
+                <nav role="navigation" aria-label="Main Business Navigation">
+                    <a href="#dashboard" onclick="routeDomain('main-domain')">Dashboard</a>
+                    <a href="#methodology" onclick="routeDomain('main-domain')">Metodologi PPS</a>
+                    <a href="#packages" onclick="routeDomain('main-domain')">Paket Program</a>
+                    <a href="#corporate-executive-syllabus" onclick="routeDomain('main-domain')">Silabus Korporat</a>
+                    <a href="#dokumentasi" onclick="routeDomain('main-domain')">Documentation</a>
+                    <button class="portfolio-trigger-btn" onclick="openPortfolioPage()">💼 Portfolio Case Study</button>
+                    <button class="ielts-route-btn" onclick="routeDomain('ielts-subdomain')">🎯 IELTS Preparation</button>
                 </nav>
             </div>
         </div>
     </header>
 
     <!-- ============================================== -->
-    <!-- SUB-DOMAIN HEADER (ISOLATED IELTS LAYER)        -->
+    <!-- ISOLATED SUB-DOMAIN NAVBAR (IELTS ONLY AREA)   -->
     <!-- ============================================== -->
-    <div id="ielts-subdomain-header" class="sub-domain-nav">
+    <div id="ielts-subdomain-navigation-bar" class="sub-domain-nav">
         <div class="sub-nav-container container">
-            <div class="sub-nav-brand" onclick="routeToDomain('main')">ETK Global // sub: ielts.etkglobal.com</div>
+            <div class="sub-nav-brand" onclick="routeDomain('main-domain')">ETK Global // sub: ielts.etkglobal.com</div>
             <div class="sub-nav-menu">
-                <button class="sub-nav-btn active" onclick="switchSubTab('sub-placement', this)">Placement Test</button>
-                <button class="sub-nav-btn" onclick="switchSubTab('sub-review', this)">Review Hasil</button>
-                <button class="sub-nav-btn" onclick="switchSubTab('sub-pendaftaran', this)">Pendaftaran Training</button>
+                <button class="sub-nav-btn active" onclick="switchIeltsSubPage('sub-placement-view', this)">Placement Test</button>
+                <button class="sub-nav-btn" onclick="switchIeltsSubPage('sub-review-view', this)">Review Hasil</button>
+                <button class="sub-nav-btn" onclick="switchIeltsSubPage('sub-pendaftaran-view', this)">Pendaftaran Training</button>
                 <a href="https://wa.me/6281901685253" target="_blank" rel="noopener" class="sub-nav-btn wa-btn">Contact Admin (WA)</a>
             </div>
         </div>
     </div>
 
 
-    <!-- ============================================== -->
-    <!-- LAYER VIEWPORT 1: MAIN DOMAIN SYSTEM CONTAINER -->
-    <!-- ============================================== -->
-    <main id="main-domain-layer" class="view-layer active-layer">
-        <!-- HERO -->
+    <!-- ========================================================= -->
+    <!-- MAIN DOMAIN LAYER HUB (CONTAINS COMPLETE ORIGINAL BLOCKS) -->
+    <!-- ========================================================= -->
+    <main id="main-domain-master-layer" class="virtual-page active-page">
+        <!-- HERO SECTION -->
         <section class="hero-split-section">
             <div class="container hero-grid">
                 <div class="hero-text-side">
-                    <h1>Kalah Negosiasi Bisnis Karena Hambatan Struktur Bahasa?</h1>
-                    <p>ETK Global Yogyakarta mengintegrasikan pendekatan Persuasive Positioning System (PPS) untuk menyukseskan program kelas bahasa Inggris bisnis korporat serta akselerasi karir global Anda.</p>
-                    <button class="btn-cta" onclick="routeToDomain('ielts-subdomain')">Buka IELTS Placement Portal &rarr;</button>
+                    <div class="problem-hook-badge">Fakta Kegagalan Karir Global</div>
+                    <h1>Kalah Negosiasi Bisnis & Gagal Tes Internasional Karena Hambatan Struktur Bahasa?</h1>
+                    <p>ETK Global Yogyakarta hadir sebagai solusi mutlak: mengintegrasikan pendekatan Persuasive Positioning System (PPS) untuk mengamankan akselerasi target skor kursus IELTS Band 9 serta penguasaan strategi pelatihan bahasa Inggris bisnis korporat di Yogyakarta.</p>
+                    <button class="btn-cta" onclick="routeDomain('ielts-subdomain')">Mulai IELTS Placement Test &rarr;</button>
                 </div>
                 <div class="hero-image-side">
-                    <img style="width:100%; border-radius:12px;" src="https://raw.githubusercontent.com/gasfarrasyid/etk_bisa/main/header_cr.jpg" alt="Banner">
+                    <img class="hero-banner-img" src="https://raw.githubusercontent.com/gasfarrasyid/etk_bisa/main/header_cr.jpg" alt="Kelas Akselerasi Bahasa Inggris Korporat ETK Yogyakarta">
                 </div>
             </div>
         </section>
 
-        <!-- DASHBOARD GENERAL -->
+        <!-- PORTAL DASHBOARD CONTROLLER -->
         <section class="dashboard-section" id="dashboard">
             <div class="container">
-                <div class="section-title">Corporate Executive Matrix</div>
-                <p style="text-align:center; margin-bottom:30px;">Program pelatihan terpadu khusus untuk peningkatan kapabilitas tim bisnis korporat dan manajemen eksekutif.</p>
+                <div class="section-title">Portal Pendaftaran & Program Kursus Bahasa Inggris ETK Global</div>
+                <p class="section-subtitle">Gunakan navigator vertikal untuk memicu visual alur data program secara downward di kanan.</p>
+                
+                <div class="dashboard-vertical-layout">
+                    <div class="dashboard-tabs-vertical">
+                        <button class="tab-btn active" onclick="switchTab(event, 'english-skills')">English Skills Matrix</button>
+                        <button class="tab-btn" onclick="switchTab(event, 'learning-modes')">Metode Pembelajaran</button>
+                        <button class="tab-btn" onclick="switchTab(event, 'prometric-nursing')">Prometric & Interview Prep</button>
+                    </div>
+
+                    <div class="dashboard-content-panel">
+                        <div id="english-skills" class="tab-panel active">
+                            <div class="sub-program-downward-grid">
+                                <div class="sub-card">
+                                    <span class="sub-card-title">English for IELTS Test</span>
+                                    <p>Akselerasi pencapaian target evaluasi IELTS Band 9 melalui dekonstruksi total terhadap seluruh komponen penilaian resmi di Yogyakarta.</p>
+                                </div>
+                                <div class="sub-card">
+                                    <span class="sub-card-title">English for Corporate Class</span>
+                                    <p>Restrukturisasi fondasi mekanika bahasa, pembenahan tata bahasa eksekutif, dan eksekusi memo bisnis formal.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="learning-modes" class="tab-panel">
+                            <div class="sub-program-downward-grid">
+                                <div class="sub-card">
+                                    <span class="sub-card-title">Private Class IELTS & Corporate</span>
+                                    <p>Akses bimbingan eksklusif tatap muka satu lawan satu dengan kurikulum yang dikustomisasi penuh sesuai profil kompetensi Anda.</p>
+                                </div>
+                                <div class="sub-card">
+                                    <span class="sub-card-title">Corporate Group Training</span>
+                                    <p>Program in-house training intensif untuk instansi dan korporasi guna meningkatkan standar global kompetensi tim.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="prometric-nursing" class="tab-panel">
+                            <div class="sub-program-downward-grid">
+                                <div class="sub-card">
+                                    <span class="sub-card-title">Prometric Nurse Test Prep</span>
+                                    <p>Syllabus komprehensif penempatan perawat medis ke luar negeri dengan penguasaan terminologi medis standar internasional.</p>
+                                </div>
+                                <div class="sub-card">
+                                    <span class="sub-card-title">English for Job Interview</span>
+                                    <p>Strategi taktis menjawab dan memenangkan wawancara kerja tingkat global dengan penyusunan portofolio profesional.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <!-- METHODOLOGY PPS -->
+        <!-- PPS SYSTEM FRAMEWORK METHODOLOGY -->
         <section class="methodology-section" id="methodology">
             <div class="container">
-                <div class="section-title">Persuasive Positioning System (PPS)</div>
-                <p style="text-align:center;">Metodologi dekonstruksi parameter keahlian komunikasi verbal eksekutif guna mencapai efisiensi negosiasi tingkat tinggi di kancah global.</p>
+                <div class="section-title">Metodologi Unggulan: Persuasive Positioning System (PPS)</div>
+                <div class="methodology-card">
+                    <h3>Akselerasi Melalui Dekonstruksi Matriks Pengujian</h3>
+                    <p>Dalam program kursus persiapan IELTS Band 9 Yogyakarta, metodologi PPS berfungsi membongkar parameter penilaian penguji (Examiner Matrix). Melalui restrukturisasi konstruksi argumen dan modulasi intonasi, kandidat diposisikan secara persuasif guna meraih efisiensi performa linguistik maksimal dalam skenario dunia kerja nyata maupun pengujian formal.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- PACKAGES SELECTION -->
+        <section class="grid-section" id="packages">
+            <div class="container">
+                <div class="section-title">Paket Program Pilihan Utama</div>
+                <div class="program-grid">
+                    <div class="program-card">
+                        <div>
+                            <h2>IELTS Preparation</h2>
+                            <div class="price">Band 9 Goal</div>
+                            <p>Kelas eksklusif dekonstruksi total matriks pengujian IELTS. Ideal untuk akademisi, pendaftaran beasiswa, dan kebutuhan migrasi global.</p>
+                        </div>
+                        <button onclick="routeDomain('ielts-subdomain')" class="btn-cta" style="font-size: 14px; padding: 12px; width: 100%;">Buka Sub-Domain Portal &rarr;</button>
+                    </div>
+                    <div class="program-card">
+                        <div>
+                            <h2>Corporate Training</h2>
+                            <div class="price">B2B Customized</div>
+                            <p>Modul terintegrasi untuk komunikasi bisnis korporat, korespondensi eksekutif, serta simulasi negosiasi tingkat tinggi.</p>
+                        </div>
+                        <a href="https://wa.me/6281901685253" target="_blank" rel="noopener" class="btn-cta" style="font-size: 14px; padding: 12px; text-decoration: none;">Hubungi Kemitraan &rarr;</a>
+                    </div>
+                    <div class="program-card">
+                        <div>
+                            <h2>Professional Prep</h2>
+                            <div class="price">Global Career</div>
+                            <p>Pelatihan akselerasi khusus English for job interview dan penguasaan standar kelulusan sertifikasi tes Prometric Nurse.</p>
+                        </div>
+                        <a href="https://wa.me/6281901685253" target="_blank" rel="noopener" class="btn-cta" style="font-size: 14px; padding: 12px; text-decoration: none;">Mulai Konsultasi &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SILABUS KORPORAT -->
+        <section class="corporate-syllabus-wrapper" id="corporate-executive-syllabus">
+            <div class="container">
+                <span class="class-badge">Kurikulum Premium</span>
+                <h2 class="section-title-premium">Comprehensive Syllabus (Kurikulum 4 Tahap)</h2>
+                <div class="timeline-grid">
+                    <div class="timeline-card">
+                        <div class="time-tag">Tahap 01</div>
+                        <div class="timeline-detail">
+                            <h3>High-Stakes Corporate Presentation</h3>
+                            <p>Fokus pada penguasaan kendali panggung, manajemen intonasi strategis, dan struktur pembukaan presentasi bisnis internasional untuk merebut atensi klien global.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-card">
+                        <div class="time-tag">Tahap 02</div>
+                        <div class="timeline-detail">
+                            <h3>Advanced Business Correspondence & Layout</h3>
+                            <p>Mekanisme penulisan email taktis, proposal bisnis bernilai tinggi, serta penyusunan dokumen laporan korporat terstandarisasi tanpa kesalahan gramatikal.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-card">
+                        <div class="time-tag">Tahap 03</div>
+                        <div class="timeline-detail">
+                            <h3>Cross-Cultural Negotiation Strategies</h3>
+                            <p>Mempelajari kerangka diplomasi bahasa Inggris untuk resolusi konflik, negosiasi kontrak kerja makro, dan kolaborasi strategis antar-negara.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-card">
+                        <div class="time-tag">Tahap 04</div>
+                        <div class="timeline-detail">
+                            <h3>Examiner Diagnostic & Core Assessment</h3>
+                            <p>Simulasi akhir komprehensif berstandar IELTS Band 9 dan Prometric Testing untuk validasi kesiapan kompetensi bahasa mutlak sebelum rilis ke industri.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- DOKUMENTASI GALLERY -->
+        <section class="media-gallery" id="dokumentasi">
+            <div class="container">
+                <div class="section-title">Dokumentasi Ekosistem ETK Global</div>
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="https://raw.githubusercontent.com/gasfarrasyid/etk_bisa/main/scene1.png" alt="Aktivitas Pengembangan Karir Global ETK Yogyakarta">
+                        <div class="gallery-caption">Sesi Strategi Karir Internasional & Penguasaan Kompetensi Korporat</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://raw.githubusercontent.com/gasfarrasyid/etk_bisa/main/scene2.png" alt="Sesi Pelatihan IELTS Band 9 Intensif">
+                        <div class="gallery-caption">Pelatihan Intensif Dekonstruksi Ujian IELTS Bersama Mentor Eksper</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://raw.githubusercontent.com/gasfarrasyid/etk_bisa/main/scene3.png" alt="Uji Kompetensi Kerja Bahasa Inggris Bisnis">
+                        <div class="gallery-caption">Simulasi Wawancara Kerja dan Uji Kelayakan Bahasa Inggris Korporasi</div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
 
 
-    <!-- ============================================== -->
-    <!-- LAYER VIEWPORT 2: ISOLATED IELTS SUB-DOMAIN     -->
-    <!-- ============================================== -->
-    <div id="ielts-subdomain-layer" class="view-layer">
+    <!-- ======================================================== -->
+    <!-- SUB-DOMAIN LAYER: ISOLATED "IELTS PREPARATION" PORTAL   -->
+    <!-- ======================================================== -->
+    <div id="ielts-subdomain-master-layer" class="virtual-page">
         <div class="container">
             
-            <!-- SUB-TAB 1: PLACEMENT TEST ENGINE -->
-            <div id="sub-placement" class="sub-tab-content" style="display: block;">
-                <h1 class="section-title" style="text-align:left; margin-bottom:10px;">IELTS Diagnostic Placement Test</h1>
-                <p style="color:#94a3b8; margin-bottom:20px;">Uji kompetensi IELTS dasar Anda secara instan menggunakan modul engine di bawah ini:</p>
+            <!-- SUB-PAGE 1: PLACEMENT TEST FRAMEWORK -->
+            <div id="sub-placement-view" class="ielts-sub-view" style="display: block;">
+                <h1 class="section-title" style="text-align: left; margin-bottom: 10px;">IELTS Diagnostic Placement Test</h1>
+                <p style="color: #94a3b8; margin-bottom: 25px;">Uji kompetensi awal Anda secara mandiri menggunakan modul simulator penempatan interaktif resmi kami:</p>
                 
                 <div class="ielts-workstation">
+                    <div class="level-selector-row">
+                        <button class="sub-nav-btn active" onclick="refreshIeltsFrame(this)">Standard Diagnostic Test</button>
+                        <button class="sub-nav-btn" onclick="refreshIeltsFrame(this)">Academic Module</button>
+                        <button class="sub-nav-btn" onclick="refreshIeltsFrame(this)">General Training Module</button>
+                    </div>
                     <div class="iframe-container">
-                        <iframe src="https://gyoutrain-lab.github.io/ETKGlobal/" title="IELTS Assessment Sandbox Engine"></iframe>
+                        <iframe id="ielts-core-frame" src="https://gyoutrain-lab.github.io/ETKGlobal/" title="IELTS Assessment Engine Sandbox"></iframe>
                     </div>
                 </div>
             </div>
 
-            <!-- SUB-TAB 2: REVIEW HASIL ANALYTICS -->
-            <div id="sub-review" class="sub-tab-content" style="display: none;">
-                <h1 class="section-title" style="text-align:left; margin-bottom:15px;">Review Hasil & Analisis Band</h1>
+            <!-- SUB-PAGE 2: REVIEW HASIL ANALYTICS -->
+            <div id="sub-review-view" class="ielts-sub-view" style="display: none;">
+                <h1 class="section-title" style="text-align: left; margin-bottom: 15px;">Review Hasil & Analisis Band</h1>
+                <p style="color: #94a3b8; margin-bottom: 25px;">Gunakan standarisasi rubrik konversi di bawah ini untuk mengukur kesiapan Band Anda:</p>
+                
                 <div class="review-box">
                     <h4>Prediksi Skor: Band 7.0 - 9.0 (Advanced Academic)</h4>
-                    <p>Mampu memahami teks kompleks dengan baik. Direkomendasikan mengambil Masterclass.</p>
+                    <p>Mampu memahami teks kompleks dengan sangat baik. Direkomendasikan langsung mengambil kelas akselerasi strategi taktis *Examiner Matrix*.</p>
                 </div>
                 <div class="review-box" style="border-left-color: #14b8a6;">
                     <h4>Prediksi Skor: Band 5.5 - 6.5 (Intermediate Practitioner)</h4>
-                    <p>Struktur bahasa dasar mapan namun memerlukan penguatan kohesi tulisan (*Writing*).</p>
+                    <p>Struktur bahasa dasar sudah mapan namun membutuhkan penguatan pada kohesi tulisan (*Writing Coherence*) dan kefasihan berargumen.</p>
+                </div>
+                <div class="review-box" style="border-left-color: #ef4444;">
+                    <h4>Prediksi Skor: Di bawah Band 5.0 (Basic / Foundation)</h4>
+                    <p>Memerlukan restrukturisasi total tata bahasa (*Grammar Foundations*) sebelum masuk ke materi simulasi pengujian resmi.</p>
                 </div>
             </div>
 
-            <!-- SUB-TAB 3: INTERACTIVE FORM REGISTRATION -->
-            <div id="sub-pendaftaran" class="sub-tab-content" style="display: none;">
-                <h1 class="section-title" style="margin-bottom:10px;">Pendaftaran Training IELTS</h1>
-                <p style="text-align:center; color:#94a3b8; margin-bottom:30px;">Lengkapi form untuk memilih skema belajar offline/online.</p>
+            <!-- SUB-PAGE 3: INTERACTIVE REGISTRATION FORM -->
+            <div id="sub-pendaftaran-view" class="ielts-sub-view" style="display: none;">
+                <h1 class="section-title" style="margin-bottom: 10px;">Pendaftaran Training IELTS</h1>
+                <p style="text-align: center; color: #94a3b8; margin-bottom: 30px;">Lengkapi aplikasi di bawah ini untuk mengamankan slot kelas belajar Anda di ETK Global.</p>
                 
                 <div class="form-card">
-                    <form onsubmit="handleIeltsSubmit(event)">
+                    <form onsubmit="executeIeltsFormSubmission(event)">
                         <div class="form-group">
-                            <label>Nama Lengkap</label>
-                            <input type="text" id="ieltsName" class="form-control" required placeholder="Nama Anda">
+                            <label for="regName">Nama Lengkap</label>
+                            <input type="text" id="regName" class="form-control" placeholder="Masukkan nama lengkap Anda" required>
                         </div>
                         <div class="form-group">
-                            <label>No. Phone (WhatsApp)</label>
-                            <input type="tel" id="ieltsPhone" class="form-control" required placeholder="Contoh: 081901685253">
+                            <label for="regPhone">No. Phone / WhatsApp</label>
+                            <input type="tel" id="regPhone" class="form-control" placeholder="Contoh: 081901685253" required>
                         </div>
                         <div class="form-group">
-                            <label>Tipe Kelas</label>
+                            <label>Sistem Pembelajaran</label>
                             <div class="radio-grid">
-                                <label class="radio-option"><input type="radio" name="classType" value="Offline (Tatap Muka)" checked> Offline Class</label>
-                                <label class="radio-option"><input type="radio" name="classType" value="Online (Virtual)"> Online Class</label>
+                                <label class="radio-option"><input type="radio" name="regMode" value="Offline (Tatap Muka)" checked> Offline Class</label>
+                                <label class="radio-option"><input type="radio" name="regMode" value="Online (Virtual)"> Online Class</label>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label>Pilihan Tingkat Program</label>
-                            <select id="ieltsProgram" class="form-control" required>
-                                <option value="" disabled selected>-- Pilih Program --</option>
-                                <option value="Basic (Foundation)">Basic (Target 4.5 - 5.5)</option>
-                                <option value="Intermediate">Intermediate (Target 6.0 - 6.5)</option>
-                                <option value="Advanced (Band 9 Masterclass)">Advanced (Target 7.0 - 9.0)</option>
+                            <label for="regLevel">Pilihan Kategori Program</label>
+                            <select id="regLevel" class="form-control" required>
+                                <option value="" disabled selected>-- Pilih Tingkat Kemampuan --</option>
+                                <option value="Basic (Foundation)">Basic (Target Band 4.5 - 5.5)</option>
+                                <option value="Intermediate (Intensive)">Intermediate (Target Band 6.0 - 6.5)</option>
+                                <option value="Advanced (Band 9 Masterclass)">Advanced (Target Band 7.0 - 9.0)</option>
                             </select>
                         </div>
-                        <button type="submit" class="btn-submit" style="width:100%; padding:14px; background:#14b8a6; border:none; color:white; font-weight:700; border-radius:6px; cursor:pointer;">Kirim Pendaftaran ke WhatsApp &rarr;</button>
+                        <button type="submit" class="btn-submit">Kirim Data Pendaftaran Via WA &rarr;</button>
                     </form>
                 </div>
             </div>
@@ -408,61 +869,164 @@
         </div>
     </div>
 
-    <!-- GLOBAL DOM MANAGEMENT JAVASCRIPT LAYER -->
-    <script>
-        // ROUTER UTAMA: BERTUGAS MENUKAR SEKILAS NAV BAR DAN KONTEN (MAIN DOMAIN VS SUB-DOMAIN)
-        function routeToDomain(domainTarget) {
-            var mainHeader = document.getElementById('main-domain-header');
-            var subHeader = document.getElementById('ielts-subdomain-header');
-            var mainLayer = document.getElementById('main-domain-layer');
-            var subLayer = document.getElementById('ielts-subdomain-layer');
 
-            if (domainTarget === 'ielts-subdomain') {
-                // Sembunyikan Navigasi Main Domain, Tampilkan Sub-nav Terisolasi
-                mainHeader.style.display = 'none';
-                subHeader.style.display = 'block';
-                mainLayer.classList.remove('active-layer');
-                subLayer.classList.add('active-layer');
+    <!-- ======================================================== -->
+    <!-- PORTFOLIO VIEWPORT LAYER (INTEGRATED CASE STUDY)         -->
+    <!-- ======================================================== -->
+    <div id="portfolio-case-study-master-layer" class="virtual-page">
+        <section class="portfolio-section">
+            <div class="container">
+                <div class="portfolio-box">
+                    <span class="class-badge" style="background-color: #14b8a6;">STUDI KASUS TEKNIS</span>
+                    <h1 style="color: #ffffff; font-size: 32px; margin-top: 10px;">ETK Global Integrated Engineering Portfolio</h1>
+                    <p class="portfolio-intro">Halaman ini mendokumentasikan pembuktian keahlian, dekonstruksi pemecahan masalah (*problem-solving*), serta arsitektur pengembangan integrasi kode yang telah diselesaikan pada proyek ini.</p>
+
+                    <h2>1. Resolusi Jalur Distribusi Aset (Raw Image CDN)</h2>
+                    <p style="margin-top: 10px;">Mengatasi isu kegagalan pemuatan gambar (*broken links*) akibat proteksi intermitten pada hosting statis GitHub Pages dengan mengonversi jalur repositori mentah ke dalam format CDN *production-ready*:</p>
+                    <ul>
+                        <li><code>https://github.com/.../blob/main/logo_etk_cr.png</code> (Format salah/terblokir)</li>
+                        <li>Direstrukturisasi total menjadi: <code>https://raw.githubusercontent.com/gasfarrasyid/etk_bisa/main/logo_etk_cr.png</code></li>
+                    </ul>
+
+                    <h2>2. Implementasi CSS Zero-Margin Navigation Backdrop Layer</h2>
+                    <p style="margin-top: 10px;">Memasang gambar aset dekoratif <code>etk_future.png</code> agar merekat presisi tanpa celah (Zero Edge) pada koordinat kiri, atas, dan bawah bar navigasi utama. Pengaturan lapisan menggunakan komposit CSS khusus:</p>
+                    <ul>
+                        <li>Mengisolasi ruang koordinat dengan properti <code>position: absolute; left: 0; top: 0; bottom: 0;</code></li>
+                        <li>Memanfaatkan teknik modern <code>mask-image: linear-gradient(...)</code> untuk menghasilkan efek gradasi memudar transparan yang halus ke arah kanan, menjamin teks menu navigasi tetap terbaca jelas (*high-readability*).</li>
+                    </ul>
+
+                    <h2>3. Desentralisasi Arsitektur Sub-Domain Terisolasi</h2>
+                    <p style="margin-top: 10px;">Memisahkan ruang lingkup program IELTS Preparation ke dalam gerbang navigasi fungsional terpisah (Placement Test, Review Hasil, Form Data Diri) dengan menonaktifkan seluruh navigasi makro korporasi saat sistem mendeteksi perpindahan halaman aktif.</p>
+
+                    <button class="btn-cta" style="margin-top: 35px; width: 100%;" onclick="routeDomain('main-domain')">&larr; Kembali Jelajahi Aplikasi Utama</button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- FOOTER BRANDING ARCHITECTURE                   -->
+    <!-- ============================================== -->
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-info">
+                <h4 style="color:#ffffff; margin-bottom:15px;">ETK Global Head Office</h4>
+                <p>Panjen Tajem, Maguwoharjo, Depok, Sleman</p>
+                <p>Daerah Istimewa Yogyakarta 55281</p>
+                <p style="margin-top:10px; color:#14b8a6;">Hotline Konten: +62 819-0168-5253</p>
+            </div>
+            <div class="footer-links">
+                <h4 style="color:#ffffff; margin-bottom:15px;">Akses Cepat Dokumen</h4>
+                <a href="#dashboard" onclick="routeDomain('main-domain')">Portal Skills Matrix</a>
+                <a href="#methodology" onclick="routeDomain('main-domain')">Metodologi Persuasive Positioning</a>
+                <a href="#" onclick="openPortfolioPage()">Lihat Studi Kasus Portofolio</a>
+                <a href="#" onclick="routeDomain('ielts-subdomain')">Gerbang Sub-Domain IELTS</a>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>&copy; 2026 ETK Global. All Rights Reserved. Kursus IELTS Terbaik & Pelatihan Bahasa Inggris Bisnis Korporat Yogyakarta.</p>
+        </div>
+    </footer>
+
+
+    <!-- ============================================== -->
+    <!-- VANILLA JAVASCRIPT SYSTEM ENGINE LOGIC         -->
+    <!-- ============================================== -->
+    <script>
+        // ROUTER STRATEGIS: MENANGANI SWITCHING BAR NAVIGASI DAN LAYER LAYER UTAMA (MAIN VS SUB-DOMAIN)
+        function routeDomain(domainId) {
+            var mainNav = document.getElementById('main-domain-navigation-bar');
+            var subNav = document.getElementById('ielts-subdomain-navigation-bar');
+            var mainLayer = document.getElementById('main-domain-master-layer');
+            var subLayer = document.getElementById('ielts-subdomain-master-layer');
+            var portfolioLayer = document.getElementById('portfolio-case-study-master-layer');
+
+            // Reset visibilitas semua halaman virtual
+            mainLayer.classList.remove('active-page');
+            subLayer.classList.remove('active-page');
+            portfolioLayer.classList.remove('active-page');
+
+            if (domainId === 'ielts-subdomain') {
+                // Konfigurasi Sub-Domain IELTS (Sembunyikan Menu Utama)
+                mainNav.style.display = 'none';
+                subNav.style.display = 'block';
+                subLayer.classList.add('active-page');
             } else {
-                // Kembalikan ke Tampilan Main Domain Utama
-                mainHeader.style.display = 'block';
-                subHeader.style.display = 'none';
-                mainLayer.classList.add('active-layer');
-                subLayer.classList.remove('active-layer');
+                // Konfigurasi Kembali ke Halaman Utama Makro
+                mainNav.style.display = 'block';
+                subNav.style.display = 'none';
+                mainLayer.classList.add('active-page');
             }
             window.scrollTo({top: 0, behavior: 'smooth'});
         }
 
-        // CONTROL NAVIGASI INTERNAL SUB-DOMAIN (SUB-TABS SWITCH)
-        function switchSubTab(tabId, element) {
-            var contents = document.getElementsByClassName("sub-tab-content");
-            for (var i = 0; i < contents.length; i++) {
-                contents[i].style.display = "none";
+        // NAVIGATION SWITCHER KHUSUS INTERNAL HALAMAN IELTS SUB-DOMAIN
+        function switchIeltsSubPage(viewId, element) {
+            var views = document.getElementsByClassName("ielts-sub-view");
+            for (var i = 0; i < views.length; i++) {
+                views[i].style.display = "none";
             }
-            document.getElementById(tabId).style.display = "block";
+            document.getElementById(viewId).style.display = "block";
 
-            var buttons = document.getElementsByClassName("sub-nav-btn");
-            for (var j = 0; j < buttons.length; j++) {
-                buttons[j].classList.remove("active");
+            var subButtons = document.getElementsByClassName("sub-nav-btn");
+            for (var j = 0; j < subButtons.length; j++) {
+                subButtons[j].classList.remove("active");
             }
-            element.classList.add("active");
+            if(element) element.classList.add("active");
         }
 
-        // PENGOLAH FORM SUB-DOMAIN & REDIRECT KE WA ADMIN
-        function handleIeltsSubmit(e) {
-            e.preventDefault();
-            var name = document.getElementById('ieltsName').value;
-            var phone = document.getElementById('ieltsPhone').value;
-            var type = document.querySelector('input[name="classType"]:checked').value;
-            var level = document.getElementById('ieltsProgram').value;
+        // MEMBUKA HALAMAN PORTFOLIO SECARA AMAN DENGAN TETAP MENAMPILKAN HEADER UTAMA
+        function openPortfolioPage() {
+            document.getElementById('main-domain-navigation-bar').style.display = 'block';
+            document.getElementById('ielts-subdomain-navigation-bar').style.display = 'none';
+            
+            document.getElementById('main-domain-master-layer').classList.remove('active-page');
+            document.getElementById('ielts-subdomain-master-layer').classList.remove('active-page');
+            document.getElementById('portfolio-case-study-master-layer').classList.add('active-page');
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        }
 
-            var message = "Halo Admin ETK Global, saya mendaftar dari Sub-domain IELTS Preparation.%0A%0A" + 
-                          "*Nama:* " + encodeURIComponent(name) + "%0A" +
-                          "*No. Phone:* " + encodeURIComponent(phone) + "%0A" +
-                          "*Tipe:* " + encodeURIComponent(type) + "%0A" +
-                          "*Program:* " + encodeURIComponent(level);
+        // TAB CONTROLLER UNTUK DASHBOARD DI MAIN DOMAIN
+        function switchTab(evt, tabId) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tab-panel");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].classList.remove("active");
+            }
+            tablinks = document.getElementsByClassName("tab-btn");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].classList.remove("active");
+            }
+            document.getElementById(tabId).classList.add("active");
+            evt.currentTarget.classList.add("active");
+        }
 
-            window.open("https://wa.me/6281901685253?text=" + message, "_blank");
+        // REFRESH MODULE ENGINE SIMULATOR IELTS PLACEMENT TEST
+        function refreshIeltsFrame(element) {
+            var buttons = element.parentNode.getElementsByClassName("sub-nav-btn");
+            for (var i = 0; i < buttons.length; i++) {
+                buttons[i].classList.remove("active");
+            }
+            element.classList.add("active");
+            document.getElementById('ielts-core-frame').src = document.getElementById('ielts-core-frame').src;
+        }
+
+        // PENANGAN DATA FORM & OTOMATISASI REDIRECT WA ADMIN
+        function executeIeltsFormSubmission(event) {
+            event.preventDefault();
+            var name = document.getElementById('regName').value;
+            var phone = document.getElementById('regPhone').value;
+            var mode = document.querySelector('input[name="regMode"]:checked').value;
+            var level = document.getElementById('regLevel').value;
+
+            var waMessage = "Halo Admin ETK Global, saya mendaftar via Sub-Domain IELTS Preparation.%0A%0A" + 
+                            "*Nama Lengkap:* " + encodeURIComponent(name) + "%0A" +
+                            "*No. Phone / WA:* " + encodeURIComponent(phone) + "%0A" +
+                            "*Sistem Belajar:* " + encodeURIComponent(mode) + "%0A" +
+                            "*Pilihan Program:* " + encodeURIComponent(level);
+
+            window.open("https://wa.me/6281901685253?text=" + waMessage, "_blank");
         }
     </script>
 </body>
